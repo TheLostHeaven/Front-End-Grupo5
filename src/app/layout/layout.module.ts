@@ -1,25 +1,30 @@
 import { CUSTOM_ELEMENTS_SCHEMA ,NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { layoutRoutingModule } from './layout-routing.module';
-import { layoutComponent } from './layout.component';
-
+//Import component reutilizables
+import { LayoutComponent } from './layout.component';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 import { HeaderComponent } from '@shared/components/header/header.component';
+import { PageNotFoundComponent } from '@shared/components/page-not-found/page-not-found.component';
+//Import modules
+import { LayoutRoutingModule } from './layout-routing.module';
+import { ReportingSystemModule } from '@reporting-system/presentation/reporting-system.module';
 
 @NgModule({
   declarations: [
-    layoutComponent,
+    LayoutComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    layoutRoutingModule,
+    LayoutRoutingModule,
+    ReportingSystemModule,
   ],
   providers: [
     provideClientHydration()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [layoutComponent]
+  bootstrap: [LayoutComponent]
 })
-export class layoutModule { }
+export class LayoutModule { }
