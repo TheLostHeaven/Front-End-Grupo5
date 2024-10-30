@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.sass',
 })
-export class layoutComponent {
+export class LayoutComponent {
   title = 'Front-AC';
 
 }
