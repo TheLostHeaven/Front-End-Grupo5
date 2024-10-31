@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from '@shared/components/page-not-found/page-no
 //Import modules
 import { LayoutRoutingModule } from './layout-routing.module';
 import { ReportingSystemModule } from '@reporting-system/presentation/reporting-system.module';
+import { AuthModule } from '@auth/presentation/auth.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ReportingSystemModule } from '@reporting-system/presentation/reporting-
     BrowserModule,
     LayoutRoutingModule,
     ReportingSystemModule,
+    AuthModule,
   ],
   providers: [
     provideClientHydration()
