@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from '@shared/components/page-not-found/page-no
 
 const routes: Routes = [
   {path: '', loadChildren: () => import('../features/Reporting-System/presentation/reporting-system.module').then(m => m.ReportingSystemModule) },
+  {path: '', loadChildren: () => import ('../features/Auth/presentation/auth.module').then(m => m.AuthModule)},
   {path: '**', component: PageNotFoundComponent}
 ];
 
