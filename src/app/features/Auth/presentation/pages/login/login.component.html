@@ -1,22 +1,11 @@
-<div class="flex justify-content-center align-items-center bg-yellow-400" style="height: 100vh; margin: 0;">
-  <div class="absolute flex justify-content-center align-items-center text-white" style="width: 120px; height: 120px; top: 70px; left: 50%; transform: translateX(-50%);">
-    <h1>PowerFix</h1>
+<div class="flex items-center justify-content-around flex-wrap bg-yellow-400 w-full min-h-screen">
+  <!-- Caja de información de login -->
+  <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
+    <presentation-login-info></presentation-login-info>
   </div>
-  <div class="card p-4" style="width: 300px; text-align: center; margin: 0; position: relative;">
-    <!-- Círculo para el logo, posicionado dentro de la caja de login -->
-    <div class="absolute bg-white border-circle flex justify-content-center align-items-center" style="width: 120px; height: 120px; top: -30px; left: 50%; transform: translateX(-50%); box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
-      <img src="./assets/logo001Powerfix.png" alt="Logo" style="width: 50px; height: 50px;" />
-    </div>
+  <!-- Caja del formulario de login -->
+<div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
+  <presentation-LoginFormComponent></presentation-LoginFormComponent>
+</div>
 
-    <div class="flex flex-column bg-yellow-50 p-5 border-round-lg pb-8 pt-8" style="width: 100%; text-align: center;">
-      <label class="flex align-items-start">Usuario</label>
-      <input type="text" pInputText [(ngModel)]="login.username" placeholder="Usuario" class="mb-3" />
-      <label class="flex align-items-start">Contraseña</label>
-      <input type="password" pInputText [(ngModel)]="login.password" placeholder="Contraseña" class="mb-3" />
-      <p-button label="Iniciar sesión" severity="warning"></p-button>
-      <br>
-      <small class="font-light text-orange-300">Registrarse</small>
-    </div>
-
-  </div>
 </div>
