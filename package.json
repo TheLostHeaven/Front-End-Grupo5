@@ -7,12 +7,10 @@
     "start:prod": "ng serve --configuration=prod",
     "start:qa": "ng serve --configuration=qa",
     "start:dev": "ng serve --configuration=dev",
-
     "build": "ng build",
     "build:prod": "ng build --configuration=prod",
     "build:qa": "ng build --configuration=qa",
     "build:dev": "ng build --configuration=dev",
-
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Front-AC": "node dist/front-ac/server/server.mjs"
