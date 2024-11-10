@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent} from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-
+import { LoginWithInfoComponent } from './components/LoginWithInfoComponent/LoginWithInfoComponent.component';
+import { LoginFormComponent } from './components/LoginFormComponent/LoginFormComponent.component';
+import { CheckboxModule } from 'primeng/checkbox';
 @NgModule({
   declarations: [
+    RegisterComponent,
     LoginComponent,
-    RegisterComponent
+    LoginWithInfoComponent,
+    LoginFormComponent
   ],
   exports: [
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     InputTextModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    CheckboxModule
   ]
 })
 export class AuthModule { }
