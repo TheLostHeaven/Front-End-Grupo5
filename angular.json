@@ -32,7 +32,10 @@
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico","src/assets"],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -135,6 +138,6 @@
     }
   },
   "cli": {
-    "analytics": "cf975ec9-4939-4216-b393-8dc2ccc48167"
-  }
+    "analytics": false
+ }
 }
