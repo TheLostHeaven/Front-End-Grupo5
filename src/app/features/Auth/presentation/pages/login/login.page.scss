@@ -1,0 +1,32 @@
+.login {
+  &__container {
+    background-color: #E69F25;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+
+    h1{
+      margin: 0;
+      color: #FFFFFF;
+      font-size: 48px;
+    }
+
+    .logo-image {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+  }
+
+  &__form {
+    background-color: #F9F9F9;
+    width: 83%;
+    height: 300px;
+    margin-top: -4rem;
+    z-index: 1;
+    opacity: 89%;
+  }
+}
