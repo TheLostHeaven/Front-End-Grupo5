@@ -20,7 +20,15 @@ export class LoginPage {
   }
 
   public authenticateUser(): void {
-    console.log(this.viewModel.getFormInformation());
+    try {
+      console.log(this.viewModel.getFormInformation());
+    }
+    catch(error){
+
+    }
+    finally{
+
+    }
   }
 
   public goToRegisterPage(): void {
