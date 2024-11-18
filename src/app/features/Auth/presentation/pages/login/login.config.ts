@@ -1,14 +1,28 @@
+import { Validators } from "@angular/forms";
+
 export const LoginConfig = Object.freeze({
   i18n: {
     title: 'PowerFix',
     formContent: {
       user: {
         label: 'Ingresar Nombre',
-        placeholder: 'Ingresar Nombre'
+        placeholder: 'Ingresar Nombre',
+        config: {
+          initialValue: '',
+          validators: [
+            Validators.required,
+          ]
+        }
       },
       passWord: {
         label: 'Contraseña',
-        placeholder: '*****'
+        placeholder: '*****',
+        config: {
+          initialValue: '',
+          validators: [
+            Validators.required,
+          ]
+        }
       },
       buttons: {
         sigInLabel: 'Entrar',
@@ -21,5 +35,8 @@ export const LoginConfig = Object.freeze({
       img: 'assets/LogoPowerfix.svg',
       alt: 'PowerFix Logo'
     }
+  },
+  routes: {
+    register: '/auth/register'
   }
 })
