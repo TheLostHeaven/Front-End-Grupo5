@@ -1,6 +1,6 @@
 .login {
   &__container {
-    background-color: #E69F25;
+    background-color: var(--powerfix-primary);
     width: 100%;
     height: 100vh;
     margin: 0 auto;
@@ -23,7 +23,7 @@
 
   &__form {
     background-color: #f9f9f9e8;
-    filter: drop-shadow(0px 7px 5px #0000002c);
+    filter: drop-shadow(0px 7px 5px var(--drop-shadow-29));
     width: 83%;
     margin-top: -4rem;
     z-index: 1;
@@ -34,7 +34,7 @@
         margin-bottom: 1px;
       }
       input {
-        filter: drop-shadow(0px 4px 3px #00000063);
+        filter: drop-shadow(0px 4px 3px var(--drop-shadow-29));
         height: 52px;
         border: none;
         color: #828898c2;
@@ -45,18 +45,18 @@
       }
     }
     ::ng-deep .submit-button {
-      filter: drop-shadow(0px 4px 4px #00000062);
+      filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
       width: 200px;
       height: 45px;
       font-size: 20px;
-      background-color: #FEAD22;
+      background-color: var(--powerfix-primary);
       color: #263402;
       border: none;
       font-weight: bold;
     }
     ::ng-deep .register-button {
       text-decoration: underline;
-      color: #E69F25;
+      color: var(--powerfix-primary);
       font-size: 20px;
     }
   }

@@ -1,10 +1,8 @@
-@import '../node_modules/primeng/resources/primeng.min.css';
-@import '../node_modules/primeflex/primeflex.scss';
-@import '../node_modules/primeicons/primeicons.css';
-@import 'primeng/resources/themes/lara-light-blue/theme.css';
-
 :root {
-  --primary-color: #E69F25;
+  --powerfix-primary: #e69f25;
+  --powerfix-primary-opacity-75: #e69f25cf;
+  --drop-shadow-29: #00000029;
+
 }
 
 body {
