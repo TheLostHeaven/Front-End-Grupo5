@@ -30,12 +30,10 @@ export class LoginPage {
   }
 
   public authenticateUser(): void {
-    console.log(this.viewModel.getFormInformation())
     this.authInteractor.authenticateUser(this.viewModel.getFormInformation()).subscribe({
       next: (response: LoginResponseEntity) => {
         this.authResponse = response;
         this.sessionProvider.setInformationToken(response?.token)
-        console.log(response);
       },
       error: (error) => {
         throw new Error(error);
