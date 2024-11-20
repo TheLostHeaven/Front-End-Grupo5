@@ -3,9 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '@shared/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: '', loadChildren: () => import('../features/Reporting-System/presentation/reporting-system.module').then(m => m.ReportingSystemModule) },
-  {path: '', loadChildren: () => import ('../features/Auth/presentation/auth.module').then(m => m.AuthModule)},
-  {path: '**', component: PageNotFoundComponent}
+  {
+    path: '',
+    redirectTo: "/auth/login",
+    pathMatch: 'full'
+  },
+  { path: 'home', loadChildren: () => import('../features/reporting-system/presentation/reporting-system.module').then(m => m.ReportingSystemModule) },
+  { path: 'auth', loadChildren: () => import ('../features/auth/presentation/auth.module').then(m => m.AuthModule) },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  },
 ];
 
 @NgModule({
