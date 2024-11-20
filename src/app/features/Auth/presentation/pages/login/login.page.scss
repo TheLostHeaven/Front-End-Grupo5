@@ -1,0 +1,63 @@
+.login {
+  &__container {
+    background-color: var(--powerfix-primary);
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+
+    h1{
+      margin: 0;
+      color: #FFFFFF;
+      font-size: 48px;
+    }
+
+    .logo-image {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+  }
+
+  &__form {
+    background-color: #f9f9f9e8;
+    filter: drop-shadow(0px 7px 5px var(--drop-shadow-29));
+    width: 83%;
+    margin-top: -4rem;
+    z-index: 1;
+    .form-item {
+      label {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 1px;
+      }
+      input {
+        filter: drop-shadow(0px 4px 3px var(--drop-shadow-29));
+        height: 52px;
+        border: none;
+        color: #2e3033c2;
+        ::placeholder {
+          color: #828898c2;
+          font-size: 16px;
+        }
+      }
+    }
+    ::ng-deep .submit-button {
+      filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
+      width: 200px;
+      height: 45px;
+      font-size: 20px;
+      background-color: var(--powerfix-primary);
+      color: #263402;
+      border: none;
+      font-weight: bold;
+    }
+    ::ng-deep .register-button {
+      text-decoration: underline;
+      color: var(--powerfix-primary);
+      font-size: 20px;
+    }
+  }
+}
