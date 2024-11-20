@@ -3,6 +3,10 @@ import { LoginConfig } from './login.config';
 import { ViewModel } from './view-model/view-model';
 import { FormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
+import { LoginResponseEntity } from '@auth/core/entities/login-response.entity';
+import { lastValueFrom } from 'rxjs';
+import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
 
 @Component({
   selector: 'app-login',
@@ -13,25 +17,36 @@ export class LoginPage {
   public config = LoginConfig;
   private viewModel: ViewModel;
   public loginForm: UntypedFormGroup;
+  public authResponse!: LoginResponseEntity;
 
-  constructor(private fb: FormBuilder, private router: Router) {
-    this.viewModel = new ViewModel(fb);
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    public authInteractor: AuthInteractor,
+    public sessionProvider: SessionProviderservice
+  ) {
+    this.viewModel = new ViewModel(this.fb);
     this.loginForm = this.viewModel.form;
   }
 
   public authenticateUser(): void {
-    try {
-      console.log(this.viewModel.getFormInformation());
-    }
-    catch(error){
-
-    }
-    finally{
-
-    }
+    console.log(this.viewModel.getFormInformation())
+    this.authInteractor.authenticateUser(this.viewModel.getFormInformation()).subscribe({
+      next: (response: LoginResponseEntity) => {
+        this.authResponse = response;
+        this.sessionProvider.setInformationToken(response?.token)
+        console.log(response);
+      },
+      error: (error) => {
+        throw new Error(error);
+      },
+      complete: () => {
+        this.router.navigate([this.config.routes.home])
+      }
+    })
   }
 
   public goToRegisterPage(): void {
-    this.router.navigate([this.config.routes.register])
+    this.router.navigate([this.config.routes.register]);
   }
 }

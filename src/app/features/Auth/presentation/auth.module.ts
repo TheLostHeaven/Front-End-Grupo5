@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { LoginPage } from './pages/login/login.page';
+import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,9 @@ import { LoginPage } from './pages/login/login.page';
     ButtonModule,
     CheckboxModule,
     ImageModule
+  ],
+  providers: [
+    AuthInteractor
   ]
 })
 export class AuthModule { }

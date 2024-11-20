@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from '@shared/components/page-not-found/page-no
 import { LayoutRoutingModule } from './layout-routing.module';
 import { ReportingSystemModule } from '@reporting-system/presentation/reporting-system.module';
 import { AuthModule } from '@auth/presentation/auth.module';
+import { ServiceProviderModule } from '../core/service-providers/service-provider.module';
+import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { AuthModule } from '@auth/presentation/auth.module';
     LayoutRoutingModule,
     ReportingSystemModule,
     AuthModule,
+    ServiceProviderModule,
   ],
   providers: [
     provideClientHydration()

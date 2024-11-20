@@ -37,6 +37,7 @@ export const LoginConfig = Object.freeze({
     }
   },
   routes: {
-    register: '/auth/register'
+    register: '/auth/register',
+    home: '/home'
   }
 })

@@ -7,7 +7,16 @@ import { LoginInformationEntity } from '@auth/core/entities/login-information.en
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class SessionProviderservice {
 
+  public informationToken: string = '';
+
+  public getInformationToken(): string {
+    return this.informationToken;
+  }
+
+  public setInformationToken(token: string): string {
+    return this.informationToken = token
+  }
 }
 
