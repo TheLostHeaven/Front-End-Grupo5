@@ -9,5 +9,5 @@ import { LoginInformationEntity } from '@auth/core/entities/login-information.en
 })
 export class AuthService {
 
-  }
+}
 

@@ -1,9 +1,11 @@
 import { UseCase } from "src/app/core/base";
 import { AuthRepository } from "@auth/core/repositories/auth.repository";
+import { RegisterResponseEntity } from "@auth/core/entities/register-response.entity";
+import { RequestRegisterEntity } from "@auth/core/entities/register-infortmation.entity";
 
-export class RegisterUseCase implements UseCase<void, void>{
+export class RegisterUseCase implements UseCase<RequestRegisterEntity, RegisterResponseEntity>{
   constructor (private registerRepository: AuthRepository){}
-  public execute(): Promise<void>{
-    return this.registerRepository.auth()
+  public execute(params: RequestRegisterEntity): Promise<RegisterResponseEntity>{
+    return this.registerRepository.registerUser(params)
   }
 }

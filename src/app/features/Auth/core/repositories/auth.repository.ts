@@ -1,4 +1,10 @@
+import { LoginRequestEntity } from "../entities/login-information.entity";
+import { LoginResponseEntity } from "../entities/login-response.entity";
+import { RequestRegisterEntity } from "../entities/register-infortmation.entity";
+import { RegisterResponseEntity } from "../entities/register-response.entity";
+
 export abstract class AuthRepository {
-  public abstract auth(): Promise<void>;
+  public abstract authenticateUser(params: LoginRequestEntity): Promise<LoginResponseEntity>;
+  public abstract registerUser(params: RequestRegisterEntity): Promise<RegisterResponseEntity>;
 }
 
