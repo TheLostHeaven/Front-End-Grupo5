@@ -11,6 +11,8 @@ import { ReportingSystemModule } from '@reporting-system/presentation/reporting-
 import { AuthModule } from '@auth/presentation/auth.module';
 import { ServiceProviderModule } from '../core/service-providers/service-provider.module';
 import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
+import { ApiService } from '@shared/services/api/api.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SessionProviderservice } from '@shared/services/auth/session-provider.s
     ServiceProviderModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    ApiService,
+    provideHttpClient(withFetch())
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [LayoutComponent]
