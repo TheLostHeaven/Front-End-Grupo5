@@ -25,7 +25,7 @@
     "paths": {
       "@environments/*": ["src/environments/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@reporting-system/*": ["src/app/features/reporting-system/*"],
+      "@home/*": ["src/app/features/home/*"],
       "@auth/*": ["src/app/features/auth/*"]
       //"@example/*": ["src/app/features/name-feature/*"]
     }
