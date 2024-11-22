@@ -1,0 +1,132 @@
+## Componente power-fix-input
+
+Componente para la implementación de inputs
+
+### Importación del módulo
+
+```javascript
+import { PowerFixInputModule } from '@shared/lib/ui';
+@NgModule({
+  ...
+  imports: [
+    ...
+    PowerFixInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+})
+```
+
+```javascript
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+formGroup?: FormGroup;
+
+constructor(private formBuilder: FormBuilder) {
+  this.formGroup = this.formBuilder.group({
+    testing_input: ['', [Validators.required]],
+  });
+}
+```
+
+```html
+<form [formGroup]="formGroup">
+  <power-fix-input
+    formControlName="input_name"
+    [type]="text"
+    [placeholder]="'placeholder'"
+    [messageInformative]="'messageInformative'"
+    [messageError]="'messageError'"
+    [textInformative]="'textInformative'"
+    [iconName]="'iconName'"
+  >
+  </power-fix-input>
+</form>
+```
+
+### Propiedades (Inputs)
+
+Define las propiedades de entrada del componente.
+
+<table>
+  <thead>
+    <tr>
+      <th>Propiedad</th>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Valor por defecto</th>
+      <th>Requerido</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>Tipo de input</td>
+      <td>'text' | 'number' | 'password' | 'textarea'</td>
+      <td>'text'</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>placeholder</td>
+      <td>Texto provisional</td>
+      <td>string</td>
+      <td>''</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>messageInformative</td>
+      <td>Mensaje informativo para el input</td>
+      <td>string</td>
+      <td>''</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>messageError</td>
+      <td>Mensaje de error para el input</td>
+      <td>string</td>
+      <td>''</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>textInformative</td>
+      <td>Texto informativo para el input</td>
+      <td>string</td>
+      <td>''</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>isBig</td>
+      <td>Tamaño de validación para el textarea</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>isDisabled</td>
+      <td>Estatus del campo</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>iconName</td>
+      <td>Nombre del icono que se visualizara a la derecha del campo</td>
+      <td>string</td>
+      <td>''</td>
+      <td>false</td>
+      <td>Puede ser un icono de SherpaFont o PrimeNG. Si hay un valor asignado a 'textInformative', se reemplaza automáticamente por **'icon-help--circle'**. Del mismo modo, si el valor asignado a 'type' es 'password', el icono se reemplaza automáticamente por **'icon-eye'**.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Iconos de PrimeNG
+
+El componente `power-fix-input` admite el uso de iconos provenientes tanto de SherpaFont como de PrimeNG. Para utilizar los iconos de PrimeNG, puedes consultar la [biblioteca de iconos de PrimeNG](https://primeicons.org/), donde encontrarás una amplia gama de opciones disponibles. Simplemente puedes utilizar el nombre del icono de PrimeNG como valor para la propiedad `icon` del componente.

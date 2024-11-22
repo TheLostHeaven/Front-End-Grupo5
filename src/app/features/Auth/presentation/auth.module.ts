@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { LoginPage } from './pages/login/login.page';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
+import { PowerFixInputModule } from '@shared/lib/ui';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
     FormsModule,
     ButtonModule,
     CheckboxModule,
-    ImageModule
+    ImageModule,
+    PowerFixInputModule
   ],
   providers: [
     AuthInteractor

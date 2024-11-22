@@ -1,0 +1,91 @@
+<div class="input-container">
+  <div class="input-container__field">
+    <div class="p-field">
+      <span
+        class="p-float-label"
+        [ngClass]="{
+          'p-input-icon-right': type === 'password' || textInformative || iconName
+        }"
+      >
+        <button
+          tabindex="-1"
+          pButton
+          type="button"
+          class="p-button input-container__button-eye"
+          (click)="handleEyePass()"
+          *ngIf="type === 'password'"
+        >
+          <i [ngClass]="eyePass + (messageError ? ' p-invalid' : '')"></i>
+        </button>
+
+        <button
+          tabindex="-1"
+          pButton
+          type="button"
+          class="p-button input-container__button-question"
+          (click)="handleInformation()"
+          [ngClass]="{ 'question-active': isShowTextInfo }"
+          *ngIf="textInformative && type !== 'password'"
+        >
+          <i class="icon-help--circle" [ngClass]="messageError ? 'p-invalid' : ''"></i>
+        </button>
+
+        <span
+          tabindex="-1"
+          class="p-button input-container__icon"
+          *ngIf="iconName && !textInformative && type !== 'password'"
+        >
+          <i [ngClass]="iconName + (messageError ? ' p-invalid' : '')"></i>
+        </span>
+
+        <input
+          class="input-field"
+          *ngIf="type !== 'textarea'; else elseBlock"
+          pInputText
+          [value]="value"
+          [id]="idElement"
+          [disabled]="isDisabled"
+          (input)="onChanges($event)"
+          (blur)="touched()"
+          [type]="type === 'password' ? (eyePass === 'icon-eye' ? type : 'text') : type"
+          [ngClass]="{
+            'placeholder': placeholder,
+            'p-invalid': messageError
+          }"
+        />
+        <i *ngIf="iconNameError && messageError" [ngClass]="iconNameError"></i>
+        <ng-template #elseBlock>
+          <textarea
+            pInputTextarea
+            [value]="value"
+            (input)="onChanges($event)"
+            (blur)="touched()"
+            [disabled]="isDisabled"
+            [id]="idElement"
+            rows="5"
+            cols="30"
+            [ngClass]="{
+              'placeholder': placeholder,
+              'p-invalid': messageError,
+              'size-big': isBig
+            }"
+          ></textarea>
+          <div class="input-textarea__background"></div>
+        </ng-template>
+        <label [for]="idElement">{{ placeholder }}</label>
+      </span>
+    </div>
+  </div>
+  <small class="input-container__error" *ngIf="messageError && !isShowTextInfo">
+    {{ messageError }}
+  </small>
+  <small
+    class="input-container__msg-informative"
+    *ngIf="messageInformative && !isShowTextInfo && !messageError"
+  >
+    {{ messageInformative }}
+  </small>
+  <small class="input-container__text-informative" *ngIf="textInformative && isShowTextInfo">
+    {{ textInformative }}
+  </small>
+</div>
