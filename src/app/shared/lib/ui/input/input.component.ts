@@ -16,7 +16,7 @@ import { generateUniqueId } from '@shared/lib/logic/generate-unique-id/generate-
   ],
 })
 export class InputComponent implements ControlValueAccessor {
-  @Input() type: string | InputType = InputType.Text;
+  @Input()type: string | InputType = InputType.Text;
   @Input() placeholder = '';
   @Input() messageInformative = '';
   @Input() messageError = '';
