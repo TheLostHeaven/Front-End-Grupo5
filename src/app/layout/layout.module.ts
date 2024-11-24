@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA ,NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA ,NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 //Import component reutilizables
 import { LayoutComponent } from './layout.component';
@@ -10,9 +10,11 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { ReportingSystemModule } from '@reporting-system/presentation/reporting-system.module';
 import { AuthModule } from '@auth/presentation/auth.module';
 import { ServiceProviderModule } from '../core/service-providers/service-provider.module';
-import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
 import { ApiService } from '@shared/services/api/api.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingService } from '@shared/lib/logic';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     LayoutRoutingModule,
     ReportingSystemModule,
     AuthModule,
@@ -31,9 +35,12 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   providers: [
     provideClientHydration(),
     ApiService,
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    DialogService,
+    DynamicDialogRef,
+    LoadingService,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [LayoutComponent]
 })
 export class LayoutModule { }

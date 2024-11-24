@@ -13,6 +13,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { LoginPage } from './pages/login/login.page';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { PowerFixInputModule } from '@shared/lib/ui';
+import { LoadingService } from '@shared/lib/logic';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PowerFixInputModule } from '@shared/lib/ui';
     PowerFixInputModule
   ],
   providers: [
-    AuthInteractor
+    AuthInteractor,
+    LoadingService
   ]
 })
 export class AuthModule { }

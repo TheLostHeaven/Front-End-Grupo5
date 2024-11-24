@@ -4,31 +4,9 @@
       <span
         class="p-float-label"
         [ngClass]="{
-          'p-input-icon-right': type === 'password' || textInformative || iconName
+          'p-input-icon-right': type === 'password'
         }"
       >
-
-
-        <button
-          tabindex="-1"
-          pButton
-          type="button"
-          class="p-button input-container__button-question"
-          (click)="handleInformation()"
-          [ngClass]="{ 'question-active': isShowTextInfo }"
-          *ngIf="textInformative && type !== 'password'"
-        >
-          <i class="icon-help--circle" [ngClass]="messageError ? 'p-invalid' : ''"></i>
-        </button>
-
-        <span
-          tabindex="-1"
-          class="p-button input-container__icon"
-          *ngIf="iconName && !textInformative && type !== 'password'"
-        >
-          <i [ngClass]="iconName + (messageError ? ' p-invalid' : '')"></i>
-        </span>
-
         <input
           class="input-field"
           *ngIf="type !== 'textarea'; else elseBlock"
@@ -44,7 +22,7 @@
             'p-invalid': messageError
           }"
         />
-        <i *ngIf="iconNameError && messageError" [ngClass]="iconNameError"></i>
+        <i *ngIf="iconError && messageError" [ngClass]="iconError"></i>
         <ng-template #elseBlock>
           <textarea
             pInputTextarea
@@ -57,8 +35,7 @@
             cols="30"
             [ngClass]="{
               'placeholder': placeholder,
-              'p-invalid': messageError,
-              'size-big': isBig
+              'p-invalid': messageError
             }"
           ></textarea>
           <div class="input-textarea__background"></div>
@@ -67,16 +44,4 @@
       </span>
     </div>
   </div>
-  <small class="input-container__error" *ngIf="messageError && !isShowTextInfo">
-    {{ messageError }}
-  </small>
-  <small
-    class="input-container__msg-informative"
-    *ngIf="messageInformative && !isShowTextInfo && !messageError"
-  >
-    {{ messageInformative }}
-  </small>
-  <small class="input-container__text-informative" *ngIf="textInformative && isShowTextInfo">
-    {{ textInformative }}
-  </small>
 </div>

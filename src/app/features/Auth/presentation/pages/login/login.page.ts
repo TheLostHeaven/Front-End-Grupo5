@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { LoginResponseEntity } from '@auth/core/entities/login-response.entity';
 import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
+import { LoadingService } from '@shared/lib/logic';
 
 @Component({
   selector: 'app-login',
@@ -22,13 +23,15 @@ export class LoginPage {
     private fb: FormBuilder,
     private router: Router,
     public authInteractor: AuthInteractor,
-    public sessionProvider: SessionProviderservice
+    public sessionProvider: SessionProviderservice,
+    public loaderService: LoadingService
   ) {
     this.viewModel = new ViewModel(this.fb);
     this.loginForm = this.viewModel.form;
   }
 
   public authenticateUser(): void {
+    this.loaderService.show();
     this.authInteractor.authenticateUser(this.viewModel.getFormInformation()).subscribe({
       next: (response: LoginResponseEntity) => {
         this.authResponse = response;
@@ -38,6 +41,7 @@ export class LoginPage {
         throw new Error(error);
       },
       complete: () => {
+        this.loaderService.hide();
         this.router.navigate([this.config.routes.home])
       }
     })

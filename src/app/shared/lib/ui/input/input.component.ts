@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { InputType, InputEye } from './input.type';
-import { generateUniqueId } from '@shared/lib/logic/generate-unique-id/generate-unique-id';
+import { InputType } from './input.type';
+import { generateUniqueId } from '@shared/lib/logic/utils/string/generate-unique-id/generate-unique-id';
 
 @Component({
   selector: 'power-fix-input',
@@ -16,38 +16,29 @@ import { generateUniqueId } from '@shared/lib/logic/generate-unique-id/generate-
   ],
 })
 export class InputComponent implements ControlValueAccessor {
-  @Input()type: string | InputType = InputType.Text;
   @Input() placeholder = '';
-  @Input() messageInformative = '';
+  @Input()type: string | InputType = InputType.Text;
   @Input() messageError = '';
-  @Input() textInformative = '';
-  @Input() isBig = false;
   @Input() isDisabled = false;
-  @Input() iconName = '';
-  @Input() iconNameError = '';
+  @Input() iconError = '';
 
-  isShowTextInfo = false;
-  idElement = generateUniqueId();
+  public idElement: string = generateUniqueId();
 
-  value = '';
+  public value: string = '';
 
-  changed: (value: any) => void = () => undefined;
-  touched: () => void = () => undefined;
-  
-  handleInformation() {
-    this.isShowTextInfo = !this.isShowTextInfo;
-  }
+  public changed: (value: any) => void = () => undefined;
+  public touched: () => void = () => undefined;
 
-  writeValue(value: string): void {
+  public writeValue(value: string): void {
     this.value = value;
   }
 
-  onChanges(event: Event): void {
+  public onChanges(event: Event): void {
     const value: string = (<HTMLInputElement>event.target).value;
     this.changed(value);
   }
 
-  registerOnChange(fn: any): void {
+  public registerOnChange(fn: any): void {
     this.changed = fn;
   }
 
