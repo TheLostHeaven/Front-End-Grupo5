@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { LoginConfig } from './login.config';
 import { ViewModel } from './view-model/view-model';
 import { FormBuilder, UntypedFormGroup } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { LoginResponseEntity } from '@auth/core/entities/login-response.entity';
-import { lastValueFrom } from 'rxjs';
 import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
 
 @Component({
