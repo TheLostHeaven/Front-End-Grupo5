@@ -57,24 +57,6 @@ describe('InputComponent', () => {
     );
   });
 
-  it(`Given an type
-      When it is password
-      Then the input-container__button-eye button elements click, change icon and call function handleEyePass`, () => {
-    // Arrange
-    const TYPE = 'password';
-    jest.spyOn(component, 'handleEyePass');
-
-    // Act
-    component.type = TYPE;
-    fixture.detectChanges();
-    const elementButtonEye = fixture.debugElement.nativeElement.querySelector(
-      '.input-container__button-eye'
-    );
-    elementButtonEye.click();
-    // Assert
-    expect(component.handleEyePass).toHaveBeenCalled();
-    expect(component.eyePass).toEqual('icon-eye--off');
-  });
 
   it(`Given an textInformative
       When the type is different 'password'
@@ -219,33 +201,6 @@ describe('InputComponent', () => {
     expect(textInformative).toBeTruthy();
     expect(elementMessageError).toBeFalsy();
     expect(elementMessageInfo).toBeFalsy();
-  });
-
-  it(`Given handleEyePass function
-      When it is called and eyePass is equal to 'icon-eye'
-      Then eyePass change to 'icon-eye--off'`, () => {
-    // Arrange
-    jest.spyOn(component, 'handleEyePass');
-
-    // Act
-    component.handleEyePass();
-
-    // Assert
-    expect(component.eyePass).toBe('icon-eye--off');
-    expect(component.handleEyePass).toHaveBeenCalled();
-  });
-
-  it(`Given handleEyePass function
-      When it is called and eyePass is equal to 'icon-eye--off'
-      Then eyePass change to 'icon-eye'`, () => {
-    // Arrange
-    component.eyePass = 'icon-eye--off';
-
-    // Act
-    component.handleEyePass();
-
-    // Assert
-    expect(component.eyePass).toBe('icon-eye');
   });
 
   it(`Given a input element

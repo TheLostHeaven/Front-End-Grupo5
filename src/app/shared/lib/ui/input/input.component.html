@@ -7,16 +7,7 @@
           'p-input-icon-right': type === 'password' || textInformative || iconName
         }"
       >
-        <button
-          tabindex="-1"
-          pButton
-          type="button"
-          class="p-button input-container__button-eye"
-          (click)="handleEyePass()"
-          *ngIf="type === 'password'"
-        >
-          <i [ngClass]="eyePass + (messageError ? ' p-invalid' : '')"></i>
-        </button>
+
 
         <button
           tabindex="-1"
@@ -47,7 +38,7 @@
           [disabled]="isDisabled"
           (input)="onChanges($event)"
           (blur)="touched()"
-          [type]="type === 'password' ? (eyePass === 'icon-eye' ? type : 'text') : type"
+          [type]="type"
           [ngClass]="{
             'placeholder': placeholder,
             'p-invalid': messageError

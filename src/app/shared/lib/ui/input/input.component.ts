@@ -26,7 +26,6 @@ export class InputComponent implements ControlValueAccessor {
   @Input() iconName = '';
   @Input() iconNameError = '';
 
-  eyePass: string | InputEye = InputEye.Open;
   isShowTextInfo = false;
   idElement = generateUniqueId();
 
@@ -34,11 +33,7 @@ export class InputComponent implements ControlValueAccessor {
 
   changed: (value: any) => void = () => undefined;
   touched: () => void = () => undefined;
-
-  handleEyePass() {
-    this.eyePass = this.eyePass === InputEye.Open ? InputEye.Closed : InputEye.Open;
-  }
-
+  
   handleInformation() {
     this.isShowTextInfo = !this.isShowTextInfo;
   }

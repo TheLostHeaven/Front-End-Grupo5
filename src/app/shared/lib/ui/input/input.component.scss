@@ -101,10 +101,6 @@
           }
         }
       }
-
-      &.p-input-icon-right {
-        padding-right: 32px;
-      }
     }
 
     textarea {
@@ -132,42 +128,7 @@
       font-weight: map-get($weights, 'regular');
     }
   }
-  &__icon,
-  &__button-eye,
-  &__button-question {
-    background-color: transparent !important;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 6px;
-    margin-top: auto;
-    margin-bottom: auto;
-    top: 0;
-    bottom: 0;
-    border: 0;
-    padding: 0;
-    z-index: 1;
-    i {
-      color: var(--black);
-      font-size: 24px;
-      transition: color 250ms ease-out;
-    }
 
-    &.question-active {
-      i {
-        color: var(--primary-color, var(--powerfix-primary));
-      }
-    }
-
-    &:enabled:hover,
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-      border: 0;
-      box-shadow: none;
-    }
-  }
   small {
     margin-top: 4px;
   }
