@@ -1,0 +1,240 @@
+// fonts config
+$font-size: 1rem;
+$fontFamilyHeading: 'Manrope', sans-serif;
+$fontPrimary: 'Manrope', sans-serif;
+
+// primary colors
+$primaryBase: #097ab2 !default;
+$primary900: #00204d !default;
+$primary800: #133261 !default;
+$primary700: #004a80 !default;
+$primary600: #006098 !default;
+$primary500: #097ab2 !default;
+$primary400: #4597cb !default;
+$primary300: #65b9e5 !default;
+$primary200: #94d8f7 !default;
+$primary100: #bfebff !default;
+$primary50: #e5f7ff !default;
+
+// secondary colors
+$secondaryBase: #53a532 !default;
+$secondary900: #0a4f09 !default;
+$secondary800: #165f0f !default;
+$secondary700: #277619 !default;
+$secondary600: #3b8d24 !default;
+$secondary500: #53a532 !default;
+$secondary400: #85c95f !default;
+$secondary300: #ace384 !default;
+$secondary200: #d3f6b1 !default;
+$secondary100: #ebfad7 !default;
+
+// tertiary colors
+$tertiaryBase: #ff9d21 !default;
+$tertiary900: #7a3206 !default;
+$tertiary800: #93440a !default;
+$tertiary700: #b75f10 !default;
+$tertiary600: #db7c18 !default;
+$tertiary500: #ff9d21 !default;
+$tertiary400: #ffbc58 !default;
+$tertiary300: #ffd079 !default;
+$tertiary200: #ffe3a6 !default;
+$tertiary100: #fff3d2 !default;
+
+// grayScale Colors
+$grayscaleBlack: #000000 !default;
+$grayscaleBase: #293038 !default;
+$grayscale900: #20262c !default;
+$grayscale800: #293038 !default;
+$grayscale700: #434f5b !default;
+$grayscale600: #5d6f7e !default;
+$grayscale500: #7b8f9d !default;
+$grayscale400: #9eadb7 !default;
+$grayscale300: #bfc9cf !default;
+$grayscale200: #dfe4e7 !default;
+$grayscale100: #f0f3f4 !default;
+$grayscaleWhite: #ffffff !default;
+
+// Linear Gradient
+
+$gradient-1: linear-gradient(180deg, #00204d 26.5%, #004a82 100%);
+$gradient-2: linear-gradient(95.79deg, #00469a 4.6%, #0078c7 95.4%);
+$gradient-3: linear-gradient(95.79deg, #4597cb 4.6%, #b7ecf9 97.23%);
+$gradient-4: linear-gradient(95.79deg, #90d5ef 4.6%, #dbf7fc 95.4%);
+
+$gradient-5: linear-gradient(95.79deg, #277619 4.6%, #85c95f 95.4%);
+$gradient-6: linear-gradient(95.79deg, #53a532 4.6%, #ace384 95.4%);
+$gradient-7: linear-gradient(95.79deg, #ace384 4.6%, #ebfad7 97.23%);
+
+$gradient-8: linear-gradient(18.26deg, #db7c18 24.81%, #ffbc58 100%);
+$gradient-9: linear-gradient(95.79deg, #ff9d21 4.6%, #ffe3a6 95.4%);
+$gradient-10: linear-gradient(95.79deg, #ffd079 4.6%, #fff3d2 97.23%);
+
+// Alerts Colors
+$textAlertsSuccess: #277619 !default;
+$textAlertsError: #dc0a0a !default;
+$textAlertsWarning: #b75f10 !default;
+$textAlertsInfo: #097ab2 !default;
+
+$bgAlertSuccess: #e5ffe1 !default;
+$bgAlertError: #ffedeb !default;
+$bgAlertWarning: #fff4bf !default;
+$bgAlertInfo: #e3f2fd !default;
+
+// ==========================================================================
+// COLORS : Eje.: background: color( primary, light );
+// ==========================================================================
+$colors: (
+  'primary': (
+    'base': $primaryBase,
+    '900': $primary900,
+    '800': $primary800,
+    '700': $primary700,
+    '600': $primary600,
+    '500': $primary500,
+    '400': $primary400,
+    '300': $primary300,
+    '200': $primary200,
+    '100': $primary100,
+    '50': $primary50,
+  ),
+  'secondary': (
+    'base': $secondaryBase,
+    '900': $secondary900,
+    '800': $secondary800,
+    '700': $secondary700,
+    '600': $secondary600,
+    '500': $secondary500,
+    '400': $secondary400,
+    '300': $secondary300,
+    '200': $secondary200,
+    '100': $secondary100,
+  ),
+  'tertiary': (
+    'base': $tertiaryBase,
+    '900': $tertiary900,
+    '800': $tertiary800,
+    '700': $tertiary700,
+    '600': $tertiary600,
+    '500': $tertiary500,
+    '400': $tertiary400,
+    '300': $tertiary300,
+    '200': $tertiary200,
+    '100': $tertiary100,
+  ),
+  'alerts': (
+    'success': $bgAlertSuccess,
+    'error': $bgAlertError,
+    'warning': $bgAlertWarning,
+    'info': $bgAlertInfo,
+  ),
+  'grayscale': (
+    'black': $grayscaleBlack,
+    'base': $grayscaleBase,
+    '900': $grayscale900,
+    '800': $grayscale800,
+    '700': $grayscale700,
+    '600': $grayscale600,
+    '500': $grayscale500,
+    '400': $grayscale400,
+    '300': $grayscale300,
+    '200': $grayscale200,
+    '100': $grayscale100,
+    'white': $grayscaleWhite,
+  ),
+  'gradient': (
+    'gradient-1': $gradient-1,
+    'gradient-2': $gradient-2,
+    'gradient-3': $gradient-3,
+    'gradient-4': $gradient-4,
+    'gradient-5': $gradient-5,
+    'gradient-6': $gradient-6,
+    'gradient-7': $gradient-7,
+    'gradient-8': $gradient-8,
+    'gradient-9': $gradient-9,
+    'gradient-10': $gradient-10,
+  ),
+);
+
+// ==========================================================================
+// SPACING : Eje.: padding: map-get($sizes, "tiny");
+// ==========================================================================
+$sizes: (
+  'none': 0,
+  'xtiny': 0.25rem,
+  // 4px
+  'tiny': 0.5rem,
+  // 8px
+  'xsmall': 0.75rem,
+  // 12px
+  'small': 0.875rem,
+  // 14px
+  'base': 1rem,
+  // 16px
+  'thumb': 1.125rem,
+  // 18px
+  'mid': 1.25rem,
+  // 20px
+  'half': 1.5rem,
+  // 24px
+  'medium': 2rem,
+  // 32px
+  'large': 3rem,
+  // 48px
+  'xlarge': 3.5rem,
+  // 56px
+  'huge': 4rem
+  // 64px
+);
+
+// ==========================================================================
+// WEIGHT : Eje.: font-weight: map-get($weights, "regular");
+// ==========================================================================
+$weights: (
+  'thin': 100,
+  'xlight': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'xbold': 800,
+  'black': 900,
+);
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+$breakpoints: (
+  'xs': 400px,
+  'sm': 600px,
+  'md': 960px,
+  'lg': 1280px,
+  'xl': 1920px,
+);
+
+// ==========================================================================
+// Alignment
+// ==========================================================================
+$alignment: left, center, right, justify;
+
+// ==========================================================================
+// SIZE FONTS : Eje.: font-size: map-get($fontSizes, "base");
+// ==========================================================================
+$fontSizes: (
+  'xsmall': 0.75rem,
+  // 12 px
+  'small': 0.8rem,
+  // 13px
+  'base': 1rem,
+  // 16px
+  'mid': 1.25rem,
+  // 20px
+  'half': 1.55rem,
+  // 25px
+  'medium': 1.95rem,
+  // 31px
+  'large': 2.45rem,
+  // 39px
+  'xlarge': 3.05rem,
+  // 58px
+);

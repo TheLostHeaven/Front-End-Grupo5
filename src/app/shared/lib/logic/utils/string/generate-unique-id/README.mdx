@@ -1,0 +1,18 @@
+# generateUniqueId
+
+La función `generateUniqueId` es una utilidad simple para generar un identificador único utilizando la API de `crypto` del navegador. Esta función es útil en situaciones donde se necesita un identificador único para elementos en la interfaz de usuario, como claves de listas o identificadores temporales.
+
+## Uso
+
+La función `generateUniqueId` no toma ningún parámetro y devuelve una cadena de caracteres numéricos que representa un identificador único.
+
+## Ejemplo de Uso
+
+Puedes usar `generateUniqueId` para generar identificadores únicos para varios propósitos:
+
+```typescript
+import { generateUniqueId } from '@shared/lib/logic/generate-unique-id/generate-unique-id';
+
+const id = generateUniqueId();
+console.log(id);  // Ejemplo de salida: "1234567890"
+```

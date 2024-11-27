@@ -26,7 +26,9 @@
       "@environments/*": ["src/environments/*"],
       "@shared/*": ["src/app/shared/*"],
       "@reporting-system/*": ["src/app/features/reporting-system/*"],
-      "@auth/*": ["src/app/features/auth/*"]
+      "@auth/*": ["src/app/features/auth/*"],
+      "@ui/*": ["src/app/shared/lib/ui/*"],
+      "@logic/*": ["src/app/shared/lib/logic/*"]
       //"@example/*": ["src/app/features/name-feature/*"]
     }
   },
