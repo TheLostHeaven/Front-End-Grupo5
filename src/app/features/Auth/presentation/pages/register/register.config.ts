@@ -75,8 +75,8 @@ export const RegisterConfig = Object.freeze({
     },
     image: {
       logo: {
-        img: 'assets/LogoPowerfix.svg', // Ruta de la imagen
-        alt: 'Logo de Registro'
+     img: 'assets/LogoPowerfix.svg',
+      alt: 'PowerFix Logo'
       }
     }
   },
