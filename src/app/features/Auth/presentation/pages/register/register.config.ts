@@ -28,7 +28,7 @@ export const RegisterConfig = Object.freeze({
       },
       password: {
         label: 'Contraseña',
-        placeholder: 'Ingrese su contraseña',
+        placeholder: '(mínimo 8 caracteres)',
         config: {
           initialValue: '',
           validators: [
@@ -80,7 +80,7 @@ export const RegisterConfig = Object.freeze({
       }
     }
   },
-  routes: {
+  routeLogin: {
     login: 'auth/login',
     home: '/home'
   }

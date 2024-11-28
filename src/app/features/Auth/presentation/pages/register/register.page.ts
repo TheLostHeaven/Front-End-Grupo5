@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router'; // Importa el Router
 import { RegisterConfig } from './register.config';
 
 @Component({
@@ -12,8 +13,7 @@ export class RegisterComponent {
 
   public config = RegisterConfig;
 
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) { // Inyecta el Router
     this.registerForm = this.fb.group({
       email: [this.config.i18n.formContent.email.config.initialValue, this.config.i18n.formContent.email.config.validators],
       password: [this.config.i18n.formContent.password.config.initialValue, this.config.i18n.formContent.password.config.validators],
@@ -28,8 +28,8 @@ export class RegisterComponent {
     }
   }
 
-  goToLoginPage() {
+  goToLoginPage(): void {
+    this.router.navigate([this.config.routeLogin.login]); // Redirección al login
     console.log('Redirigiendo al login...');
-    // Lógica de redirección al login
   }
 }
