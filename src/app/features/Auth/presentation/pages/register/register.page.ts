@@ -14,7 +14,7 @@ import { ViewModel } from './view-model/view-model';
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss']
 })
-export class RegisterComponent {
+export class RegisterPage {
   public config = RegisterConfig;
   private viewModel: ViewModel
   public registerForm: UntypedFormGroup;
