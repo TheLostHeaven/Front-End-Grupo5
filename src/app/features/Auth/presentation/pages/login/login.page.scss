@@ -27,23 +27,6 @@
     width: 83%;
     margin-top: -4rem;
     z-index: 1;
-    .form-item {
-      label {
-        font-weight: 500;
-        font-size: 18px;
-        margin-bottom: 1px;
-      }
-      input {
-        filter: drop-shadow(0px 4px 3px var(--drop-shadow-29));
-        height: 52px;
-        border: none;
-        color: #2e3033c2;
-        ::placeholder {
-          color: #828898c2;
-          font-size: 16px;
-        }
-      }
-    }
     ::ng-deep .submit-button {
       filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
       width: 200px;
