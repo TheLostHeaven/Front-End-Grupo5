@@ -1,0 +1,11 @@
+$font-size-props: (
+  "text-xs": .8rem,
+  "text-base": 1rem,
+  "text-lg": 1.25rem,
+  "text-xl": 1.55rem,
+  "text-2xl": 1.95rem,
+  "text-3xl": 2.45rem,
+  "text-4xl": 3.05rem,
+);
+
+@include style-class('font-size', $font-size-props, true);

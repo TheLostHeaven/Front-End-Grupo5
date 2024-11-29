@@ -1,0 +1,47 @@
+<div class="input-container">
+  <div class="input-container__field">
+    <div class="p-field">
+      <span
+        class="p-float-label"
+        [ngClass]="{
+          'p-input-icon-right': type === 'password'
+        }"
+      >
+        <input
+          class="input-field"
+          *ngIf="type !== 'textarea'; else elseBlock"
+          pInputText
+          [value]="value"
+          [id]="idElement"
+          [disabled]="isDisabled"
+          (input)="onChanges($event)"
+          (blur)="touched()"
+          [type]="type"
+          [ngClass]="{
+            'placeholder': placeholder,
+            'p-invalid': messageError
+          }"
+        />
+        <i *ngIf="iconError && messageError" [ngClass]="iconError"></i>
+        <ng-template #elseBlock>
+          <textarea
+            pInputTextarea
+            [value]="value"
+            (input)="onChanges($event)"
+            (blur)="touched()"
+            [disabled]="isDisabled"
+            [id]="idElement"
+            rows="5"
+            cols="30"
+            [ngClass]="{
+              'placeholder': placeholder,
+              'p-invalid': messageError
+            }"
+          ></textarea>
+          <div class="input-textarea__background"></div>
+        </ng-template>
+        <label [for]="idElement">{{ placeholder }}</label>
+      </span>
+    </div>
+  </div>
+</div>

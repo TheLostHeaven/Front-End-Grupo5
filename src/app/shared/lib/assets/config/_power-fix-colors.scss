@@ -1,0 +1,38 @@
+/** Power-fix Colors **/
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  /** Principal Colors **/
+  --powerfix-primary: #e69f25;
+  --powerfix-primary-opacity-75: #e69f25cf;
+
+  /** Shadows **/
+  --drop-shadow-29: #00000029;
+
+  /** Black **/
+  --black: #000000;
+
+  /** White **/
+  --white: #FFFFFF;
+
+  /** Gray **/
+  --gray-800: #454545;
+  --gray-500: #646464;
+  --gray-400: #848484;
+  --gray-300: #c2c2c2;
+  --gray-200: #e8e8e8;
+  --gray-200-rgb: rgb(232, 232, 232);
+  --gray-100: #fafafa;
+
+  /** Form **/
+  --form-field: #ffffff;
+
+  /** Red **/
+  --error: #ff3e60;
+  --error-95: #bb2741;
+  --error-80: #d93552;
+  --error-60: #ff5a78;
+  --error-40: #ff8399;
+  --error-20: #ffaebd;
+  --error-10: #ffd6dd;
+}
