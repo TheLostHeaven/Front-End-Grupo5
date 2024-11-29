@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 
-import { RegisterComponent } from './pages/register/register.page';
+import { RegisterPage } from './pages/register/register.page';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 
@@ -14,11 +14,13 @@ import { LoginPage } from './pages/login/login.page';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { PowerFixInputModule } from '@shared/lib/ui';
 import { LoadingService } from '@shared/lib/logic';
+import { ContractPage } from './pages/contract/contract.page';
 
 @NgModule({
   declarations: [
-    RegisterComponent,
-    LoginPage
+    RegisterPage,
+    LoginPage,
+    ContractPage
 
   ],
   exports: [

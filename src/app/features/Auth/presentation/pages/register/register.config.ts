@@ -80,5 +80,9 @@ export const RegisterConfig = Object.freeze({
   routeLogin: {
     login: '/auth/login',
     home: '/home'
+  },
+  routeContract: {
+    login: '/auth/contract',
+    home: '/home'
   }
 });
