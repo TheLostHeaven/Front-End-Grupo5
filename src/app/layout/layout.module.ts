@@ -7,7 +7,7 @@ import { HeaderComponent } from '@shared/components/header/header.component';
 import { PageNotFoundComponent } from '@shared/components/page-not-found/page-not-found.component';
 //Import modules
 import { LayoutRoutingModule } from './layout-routing.module';
-import { ReportingSystemModule } from '@reporting-system/presentation/reporting-system.module';
+import { FormModule } from '@form/presentation/form.module';
 import { AuthModule } from '@auth/presentation/auth.module';
 import { ServiceProviderModule } from '../core/service-providers/service-provider.module';
 import { ApiService } from '@shared/services/api/api.service';
@@ -28,8 +28,8 @@ import { LoadingService } from '@shared/lib/logic';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     LayoutRoutingModule,
-    ReportingSystemModule,
     AuthModule,
+    FormModule,
     ServiceProviderModule,
   ],
   providers: [

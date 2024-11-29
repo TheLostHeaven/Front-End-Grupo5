@@ -8,8 +8,8 @@ const routes: Routes = [
     redirectTo: "/auth/login",
     pathMatch: 'full'
   },
-  { path: 'home', loadChildren: () => import('../features/reporting-system/presentation/reporting-system.module').then(m => m.ReportingSystemModule) },
   { path: 'auth', loadChildren: () => import ('../features/auth/presentation/auth.module').then(m => m.AuthModule) },
+  { path: 'form', loadChildren: () => import ('../features/forms/presentation/form.module').then(m => m.FormModule)},
   {
     path: '**',
     component: PageNotFoundComponent
