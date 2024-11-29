@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 
-import { RegisterComponent } from './pages/register/register.component';
+import { RegisterComponent } from './pages/register/register.page';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 

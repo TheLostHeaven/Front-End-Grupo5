@@ -1,0 +1,77 @@
+<div class="register__container flex align-items-center flex-column">
+  <h1 class="text-center pt-4">{{ config.i18n.title }}</h1>
+
+  <div class="logo-image mx-auto bg-white border-circle mt-3">
+    <p-image [src]="config.i18n.image.logo.img" width="130" />
+  </div>
+
+  <div class="register__form border-round-3xl px-5 pt-8">
+    <form [formGroup]="registerForm">
+      <div class="form-item flex flex-column mt-1">
+          <power-fix-input
+          type="text"
+          formControlName="userName"
+          [placeholder]="config.i18n.formContent.user.label"
+          >
+          </power-fix-input>
+      </div>
+
+      <div class="form-item flex flex-column mt-3">
+          <power-fix-input
+          type="email"
+          formControlName="email"
+          [placeholder]="config.i18n.formContent.email.placeholder"
+          >
+          </power-fix-input>
+      </div>
+
+      <div class="form-item flex flex-column mt-3">
+          <power-fix-input
+          type="password"
+          formControlName="passWord"
+          [placeholder]="config.i18n.formContent.passWord.label"
+          >
+          </power-fix-input>
+      </div>
+
+      <div class="form-item flex flex-column mt-3">
+        <power-fix-input
+        type="confirmPassword"
+        formControlName="confirmPassword"
+        [placeholder]="config.i18n.formContent.confirmPassword.placeholder"
+        >
+        </power-fix-input>
+      </div>
+
+      <div class="card flex align-items-center m-2 text-gray-500">
+        <p-checkbox
+        class="m-1"
+        [binary]="true"
+        inputId="binary"
+        formControlName="termsAndConditions"
+        />
+        <small>{{config.i18n.formContent.termsAndConditions.label}}</small>
+      </div>
+
+      <div class="mt-3 flex justify-content-center flex-column align-items-center">
+
+        <p-button
+          [label]="config.i18n.formContent.buttons.registerLabel"
+          class="border-round-md"
+          styleClass="submit-button"
+          (click)="onSubmit()"
+          [disabled]="registerForm.invalid">
+        </p-button>
+
+        <p-button
+          [label]="config.i18n.formContent.buttons.loginLabel"
+          [link]="true"
+          class="mt-3 mb-5"
+          styleClass="register-button"
+          (click)="goToLoginPage()">
+        </p-button>
+      </div>
+    </form>
+  </div>
+</div>
+
