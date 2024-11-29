@@ -4,29 +4,27 @@ export const RegisterConfig = Object.freeze({
   i18n: {
     title: 'PowerFix',
     formContent: {
-      userName: {
+      user: {
         label: 'Nombre de usuario',
         placeholder: 'Ingresar Nombre',
         config: {
           initialValue: '',
           validators: [
             Validators.required,
-            Validators.email
           ]
         }
       },
       email: {
         label: 'Correo Electrónico',
-        placeholder: 'PowerFix@gmai.com',
+        placeholder: 'PowerFix@gmail.com',
         config: {
           initialValue: '',
           validators: [
             Validators.required,
-            Validators.email
           ]
         }
       },
-      password: {
+      passWord: {
         label: 'Contraseña',
         placeholder: '(mínimo 8 caracteres)',
         config: {
@@ -39,7 +37,7 @@ export const RegisterConfig = Object.freeze({
       },
       confirmPassword: {
         label: 'Confirmar Contraseña',
-        placeholder: 'Repita su contraseña',
+        placeholder: 'Confirma la Contraseña',
         config: {
           initialValue: '',
           validators: [
@@ -54,7 +52,6 @@ export const RegisterConfig = Object.freeze({
           initialValue: '',
           validators: [
             Validators.required,
-            Validators.minLength(10)
           ]
         }
       },
@@ -75,13 +72,13 @@ export const RegisterConfig = Object.freeze({
     },
     image: {
       logo: {
-     img: 'assets/LogoPowerfix.svg',
+      img: 'assets/LogoPowerfix.svg',
       alt: 'PowerFix Logo'
       }
     }
   },
   routeLogin: {
-    login: 'auth/login',
+    login: '/auth/login',
     home: '/home'
   }
 });

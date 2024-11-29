@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router'; // Importa el Router
+import { FormBuilder, UntypedFormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegisterConfig } from './register.config';
+import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
+import { RegisterResponseEntity } from '@auth/core/entities/register-response.entity';
+import { SessionProviderservice } from '@shared/services/auth/session-provider.service';
+import { LoadingService } from '@shared/lib/logic';
+import { LoginResponseEntity } from '@auth/core/entities/login-response.entity';
+import { ViewModel } from './view-model/view-model';
 
 @Component({
   selector: 'app-register',
@@ -9,27 +15,30 @@ import { RegisterConfig } from './register.config';
   styleUrls: ['./register.page.scss']
 })
 export class RegisterComponent {
-  public registerForm: FormGroup;
-
   public config = RegisterConfig;
+  private viewModel: ViewModel
+  public registerForm: UntypedFormGroup;
+  public authResponse! : LoginResponseEntity
 
-  constructor(private fb: FormBuilder, private router: Router) { // Inyecta el Router
-    this.registerForm = this.fb.group({
-      email: [this.config.i18n.formContent.email.config.initialValue, this.config.i18n.formContent.email.config.validators],
-      password: [this.config.i18n.formContent.password.config.initialValue, this.config.i18n.formContent.password.config.validators],
-      confirmPassword: [this.config.i18n.formContent.confirmPassword.config.initialValue, this.config.i18n.formContent.confirmPassword.config.validators]
-    });
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    public authInteractor: AuthInteractor,
+    public sessionProvider: SessionProviderservice,
+    public loaderService: LoadingService
+  ) {
+    this.viewModel = new ViewModel(this.fb);
+    this.registerForm = this.viewModel.form;
   }
 
   onSubmit() {
     if (this.registerForm.valid) {
-      console.log('Registro exitoso:', this.registerForm.value);
-      // Aquí puedes agregar lógica para enviar los datos al servidor
     }
   }
 
   goToLoginPage(): void {
-    this.router.navigate([this.config.routeLogin.login]); // Redirección al login
-    console.log('Redirigiendo al login...');
+    this.router.navigate([this.config.routeLogin.login]);
+
   }
 }
