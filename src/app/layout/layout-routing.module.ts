@@ -8,7 +8,7 @@ const routes: Routes = [
     redirectTo: "/auth/login",
     pathMatch: 'full'
   },
-  { path: 'home', loadChildren: () => import('../features/home/presentation/home.module').then(m => m.HomeModule) },
+  { path: 'home', loadChildren: () => import('../features/reporting-system/presentation/reporting-system.module').then(m => m.ReportingSystemModule) },
   { path: 'auth', loadChildren: () => import ('../features/auth/presentation/auth.module').then(m => m.AuthModule) },
   {
     path: '**',
