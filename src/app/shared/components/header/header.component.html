@@ -1,1 +1,23 @@
-<p>header works!</p>
+<nav class="navbar" *ngIf="navbarService.isVisible">
+  <div class="navbar__container">
+
+    <div class="nav-logo">
+      <ul>
+        <p-image [src]="config.image.logo.img" [alt]="config.image.logo.alt" width="36" height="40"/>
+      </ul>
+    </div>
+
+    <div class="nav-title align-items-center">
+        <h1 (click)="goToHome()">{{ config.i18n.title }}</h1>
+      </div>
+
+      <div class="nav-button">
+        <ul>
+          <button class="navbar-button" [src]="config.image.icon.img">
+            <p-image [src]="config.image.icon.img" [alt]="config.image.icon.alt" width="36" height="40"/>
+          </button>
+        </ul>
+      </div>
+
+  </div>
+</nav>
