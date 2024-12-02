@@ -6,7 +6,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { LoadingService } from '@shared/lib/logic';
 import { FormsModule } from '@angular/forms';
 import { FloatLabelModule } from "primeng/floatlabel"
-import { PowerFixDropdownModule } from '@shared/lib/ui/dropdown';
+//import { PowerFixDropdownModule } from '@shared/lib/ui/dropdown';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { PowerFixDropdownModule } from '@shared/lib/ui/dropdown';
     DropdownModule,
     FormsModule,
     FloatLabelModule,
-    PowerFixDropdownModule,
+    //PowerFixDropdownModule,
   ],
   providers: [
     LoadingService
