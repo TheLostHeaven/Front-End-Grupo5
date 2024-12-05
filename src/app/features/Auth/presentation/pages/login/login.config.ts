@@ -11,6 +11,7 @@ export const LoginConfig = Object.freeze({
           initialValue: '',
           validators: [
             Validators.required,
+            Validators.minLength(8)
           ]
         }
       },

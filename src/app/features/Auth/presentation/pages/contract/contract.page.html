@@ -6,7 +6,7 @@
   </div>
 
   <div class="register__form border-round-3xl px-5 pt-8">
-    <form>
+    <form [formGroup]="contractForm">
       <div class="form-item flex flex-column mt-1">
         <label>{{config.i18n.formContent.numberContrac.label}}</label>
         <input
