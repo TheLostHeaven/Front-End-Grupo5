@@ -1,30 +1,28 @@
 <div class="register__container">
   <!-- Botones de navegacion -->
-  <div
-    class="register__bgBtn p-3 flex justify-content-around"
-    style="cursor: pointer"
-  >
+  <div class="register__bgBtn p-3 flex justify-content-around" style="cursor: pointer">
     <p-image
-    (click)="goBack()"
+      (click)="goBack()"
       [src]="config.i18n.btnImage.back.img"
       alt="{{ config.i18n.btnImage.back.alt }}"
       class="back-image"
     ></p-image>
 
     <p-image
-    (click)="gofoward()"
+      (click)="gofoward()"
       [src]="config.i18n.btnImage.forward.img"
       alt="{{ config.i18n.btnImage.forward.alt }}"
       class="back-image"
     ></p-image>
   </div>
   <!-- Botones de navegacion -->
-  <div class=" flex align-items-center flex-column">
+
+  <div class="flex align-items-center flex-column">
     <h1 class="text-center pt-4">{{ config.i18n.title }}</h1>
     <div class="border-round-3xl px-5 pt-8 flex flex-wrap justify-content-center">
       <section *ngFor="let item of items">
         <div
-          class="container w-9rem h-7rem bg-gray-100 m-3 text-center p-2 shadow-4 border-round-2xl"
+          class="cursor-pointer container w-7rem h-9rem bg-gray-100 m-3 text-center p-2 shadow-4 border-round-2xl"
           (click)="getInto()"
         >
           <div class="image-container">
