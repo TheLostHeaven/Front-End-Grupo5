@@ -5,10 +5,12 @@ import { RegisterPage } from "./pages/register/register.page";
 import { ContractPage } from "./pages/contract/contract.page";
 
 
+
 const routes: Routes = [
   { path: 'register', component: RegisterPage},
   { path: 'login', component: LoginPage},
-  { path: 'contract', component: ContractPage}
+  { path: 'contract', component: ContractPage},
+
 ];
 
 @NgModule({

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthRoutingModule } from './auth-routing.module';
+import { FormRoutingModule } from './form-routing.module';
 
-import { RegisterPage } from './pages/register/register.page';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 
@@ -10,28 +9,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
-import { LoginPage } from './pages/login/login.page';
 import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { PowerFixInputModule } from '@shared/lib/ui';
 import { LoadingService } from '@shared/lib/logic';
-import { ContractPage } from './pages/contract/contract.page';
+import { MenuPage } from './pages/menu/menu.page';
 
 @NgModule({
   declarations: [
-    RegisterPage,
-
-    LoginPage,
-    ContractPage
-
-
-
+    MenuPage
   ],
   exports: [
-    LoginPage
+
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    FormRoutingModule,
     ReactiveFormsModule,
     InputTextModule,
     FormsModule,
@@ -45,4 +37,4 @@ import { ContractPage } from './pages/contract/contract.page';
     LoadingService
   ]
 })
-export class AuthModule { }
+export class FormModule { }
