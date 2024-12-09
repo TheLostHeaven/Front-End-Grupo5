@@ -1,0 +1,60 @@
+<div class="register__container">
+<app-btn-navigate></app-btn-navigate>
+
+
+  <h2 class="text-center">Reporte de Poste Caído</h2>
+<div class="container text-center m-5 p-4 roun bg-gray-100">
+  <form [formGroup]="fallenPolesForm" (ngSubmit)="onSubmit()">
+    <!-- Pregunta sobre la energía -->
+    <div class="form-group">
+      <label>¿La caída del poste generó una falla de energía en el sector?</label>
+      <div class="button-group flex-row flex-wrap">
+        <button
+          type="button"
+          [class.selected]="fallenPolesForm.get('powerOutage')?.value === 'Si'"
+          (click)="setPowerOutage('Si')"
+        >
+          Sí
+        </button>
+        <button
+          type="button"
+          [class.selected]="fallenPolesForm.get('powerOutage')?.value === 'No'"
+          (click)="setPowerOutage('No')"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <!-- Campo para dirección -->
+    <div class="form-group mt-3 mb-2">
+      <label for="address">Ingresa la dirección más cercana al poste</label>
+      <input
+        id="address"
+        type="text"
+        formControlName="address"
+        placeholder="Ejemplo: Calle 123, Ciudad"
+        class="form-control p-2"
+      />
+      <div *ngIf="fallenPolesForm.get('address')?.touched && fallenPolesForm.get('address')?.invalid">
+        <small *ngIf="fallenPolesForm.get('address')?.errors?.['required']" class="error-text">
+          Este campo es obligatorio.
+        </small>
+        <small *ngIf="fallenPolesForm.get('address')?.errors?.['minlength']" class="error-text">
+          La dirección debe tener al menos 5 caracteres.
+        </small>
+      </div>
+
+
+    </div>
+
+    <!-- Botón de enviar -->
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary" [disabled]="fallenPolesForm.invalid">
+        Enviar Reporte
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+

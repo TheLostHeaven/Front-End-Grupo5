@@ -1,0 +1,16 @@
+<div class="register__bgBtn p-3 flex justify-content-around" style="cursor: pointer">
+  <p-image
+    (click)="goBack()"
+    [src]="config.i18n.btnImage.back.img"
+    alt="{{ config.i18n.btnImage.back.alt }}"
+    class="back-image"
+  ></p-image>
+
+  <p-image
+    (click)="goForward()"
+    [src]="config.i18n.btnImage.forward.img"
+    alt="{{ config.i18n.btnImage.forward.alt }}"
+    class="back-image"
+  ></p-image>
+
+</div>
