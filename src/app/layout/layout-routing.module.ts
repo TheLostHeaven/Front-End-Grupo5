@@ -8,6 +8,8 @@ const routes: Routes = [
     redirectTo: "/auth/login",
     pathMatch: 'full'
   },
+
+  { path: 'home', loadChildren: () => import('../features/home/presentation/home.module').then(m => m.HomeModule) },
   { path: 'auth', loadChildren: () => import ('../features/auth/presentation/auth.module').then(m => m.AuthModule) },
   { path: 'form', loadChildren: () => import ('../features/forms/presentation/form.module').then(m => m.FormModule)},
   {
