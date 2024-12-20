@@ -7,6 +7,7 @@ import { HeaderComponent } from '@shared/components/header/header.component';
 import { PageNotFoundComponent } from '@shared/components/page-not-found/page-not-found.component';
 //Import modules
 import { LayoutRoutingModule } from './layout-routing.module';
+import { FormModule } from '@form/presentation/form.module';
 import { HomeModule } from '@home/presentation/home.module';
 import { AuthModule } from '@auth/presentation/auth.module';
 import { ServiceProviderModule } from '../core/service-providers/service-provider.module';
@@ -29,8 +30,11 @@ import { ImageModule } from 'primeng/image';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     LayoutRoutingModule,
+
     HomeModule,
+
     AuthModule,
+    FormModule,
     ServiceProviderModule,
     ImageModule
   ],

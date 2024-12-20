@@ -1,0 +1,26 @@
+<div class="register__container">
+    <!-- Inicio botones de navegación -->
+    <!-- <app-btn-navigate></app-btn-navigate> -->
+    <!-- Fin botones de navegación -->
+  
+    <div class="flex align-items-center flex-column">
+      <h1 class="text-center pt-4">{{ config.i18n.title }}</h1>
+      <div class="border-round-3xl px-5 pt-8 flex flex-wrap justify-content-center">
+        <section *ngFor="let item of items">
+            <div
+              class="cursor-pointer container w-7rem h-9rem bg-gray-100 m-3 text-center p-2 shadow-4 border-round-2xl"
+              (click)="setActiveComponent(item.route)"
+            >
+              <div class="image-container">
+                <img [src]="item.icon" alt="{{ item.title }}" class="w-3rem" />
+                <div class="container">
+                  <small class="text-container">{{ item.title }}</small>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+      </div>
+    </div>  
+  </div>
+  

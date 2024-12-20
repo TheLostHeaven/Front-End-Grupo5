@@ -25,6 +25,7 @@
     "paths": {
       "@environments/*": ["src/environments/*"],
       "@shared/*": ["src/app/shared/*"],
+      "@form/*": ["src/app/features/forms/*"],
       "@home/*": ["src/app/features/home/*"],
       "@auth/*": ["src/app/features/auth/*"],
       "@ui/*": ["src/app/shared/lib/ui/*"],

@@ -1,0 +1,47 @@
+    <div class="diagnostic__container flex flex-column align-items-center">
+        <h1 class="text-center pt-4">{{ config.i18n.title }}</h1>
+    
+        <div class="diagnostic__form border-round-3xl px-5 pt-8">
+        <form [formGroup]="diagnosticForm">
+            <p class="form-question">{{ config.i18n.formContent.question }}</p>
+    
+            <div class="form-options flex flex-column align-items-center mt-3">
+            <button
+                type="button"
+                class="option-button mb-3"
+                [ngClass]="{'selected': selectedOption === 'yes'}"
+                (click)="onOptionSelect('yes')"
+            >
+                {{ config.i18n.formContent.options.yes }}
+            </button>
+            <button
+                type="button"
+                class="option-button"
+                [ngClass]="{'selected': selectedOption === 'no'}"
+                (click)="onOptionSelect('no')"
+            >
+                {{ config.i18n.formContent.options.no }}
+            </button>
+            </div>
+    
+            <div class="form-item flex flex-column mt-4">
+            <label class="form-label mb-1">{{ config.i18n.formContent.address.label }}</label>
+            <power-fix-input
+                type="text"
+                formControlName="address"
+                [placeholder]="config.i18n.formContent.address.placeholder"
+            ></power-fix-input>
+            </div>
+    
+            <div class="mt-5 flex justify-content-center">
+            <p-button
+                [label]="config.i18n.formContent.button.submit"
+                class="submit-button border-round-md"
+                (click)="submitReport()"
+                [disabled]="diagnosticForm.invalid || !selectedOption"
+            ></p-button>
+            </div>
+        </form>
+        </div>
+    </div>
+    
