@@ -1,0 +1,120 @@
+.fallen-pole-report__container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-item {
+    margin-bottom: 1rem;
+  
+    &.options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  textarea,
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #e69f25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .damage-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      img {
+        max-width: 100; 
+        margin-bottom: 0.5rem;
+      }
+  
+      button {
+        width: auto;
+        padding: 0.5rem 1rem;
+
+      }
+  
+      /* Añadir el texto debajo de las imágenes */
+      .sector-label {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #333;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  
+  button[type='submit'] {
+    margin-top: 2rem;
+  }
+  
+  .sector-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color: #e69f25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; 
+  }
+  .options{
+    display: flex;
+    justify-content: space-between;
+  }
+  .sector-button img {
+    max-width: 40px; 
+    height: auto;
+  }
+  
+  .sector-button .sector-label {
+    font-size: 0.9rem; 
+  }
+  
+  .sector-button.damage-at-home {
+    background-color: #e69f25;
+  }
+  
+  button[type='submit'] {
+    margin-top: 2rem;
+  }
+  
