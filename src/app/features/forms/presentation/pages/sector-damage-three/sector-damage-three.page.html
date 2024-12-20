@@ -1,0 +1,36 @@
+<div class="sector-damage-container">
+  <h1 class="text-center">{{ config.i18n.title }}</h1>  
+  
+  <div class="diagnostic__form border-round-3xl px-5 pt-8">
+    <p class="form-question text-center">{{ config.i18n.formContent.question }}</p> 
+
+    <div class="form-options flex flex-column align-items-center mt-3">
+      <button
+        type="button"
+        class="option-button mb-3"
+        [ngClass]="{'selected': selectedOption === 'yes'}"
+        (click)="onOptionSelect('yes')"
+      >
+        {{ config.i18n.formContent.options.yes }}
+      </button>
+      <button
+        type="button"
+        class="option-button"
+        [ngClass]="{'selected': selectedOption === 'no'}"
+        (click)="onOptionSelect('no')"
+      >
+        {{ config.i18n.formContent.options.no }}
+      </button>
+    </div>
+      <div class="mt-4 submit-button-container">
+        <button
+          type="button"
+          class="submit-button"
+          (click)="submitReport()"
+          [disabled]="!selectedOption"
+        >
+          {{ config.i18n.formContent.button.submit }}
+        </button>
+      </div>
+  </div>
+</div>
