@@ -13,10 +13,24 @@ import { AuthInteractor } from '@auth/core/interactor/auth.interactor';
 import { PowerFixInputModule } from '@shared/lib/ui';
 import { LoadingService } from '@shared/lib/logic';
 import { MenuPage } from './pages/menu/menu.page';
+import { ReportDamageComponent } from './pages/report-damage/report-damage.page';
+import { FallenPoleReportComponent } from './pages/fallen-pole-report/fallen-pole-report.page';
+import { PowerOutageComponent } from './pages/power-outage/power-outage.page';
+import { SectorDamageComponent } from './pages/sector-damage/sector-damage.page';
+import { SectorDamageTwoComponent } from './pages/sector-damage-two/sector-damage-two.page';
+import { SectorDamageThreeComponent } from './pages/sector-damage-three/sector-damage-three.page';
+import { TransformerFailureComponent } from './pages/transformer-failure/transformer-failure.page';
 
 @NgModule({
   declarations: [
-    MenuPage
+    MenuPage,
+    ReportDamageComponent,
+    FallenPoleReportComponent,
+    PowerOutageComponent,
+    SectorDamageComponent,
+    SectorDamageTwoComponent,
+    SectorDamageThreeComponent,
+    TransformerFailureComponent
   ],
   exports: [
 
@@ -30,7 +44,7 @@ import { MenuPage } from './pages/menu/menu.page';
     ButtonModule,
     CheckboxModule,
     ImageModule,
-    PowerFixInputModule
+    PowerFixInputModule,
   ],
   providers: [
     AuthInteractor,
