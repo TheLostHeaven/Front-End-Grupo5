@@ -6,7 +6,7 @@ export const MenuConfig = Object.freeze({
         back: {
         img: 'assets/btnAtras.svg',
         alt: 'ir atras',
-           width: '50px',
+          width: '50px',
           height: '50px'
         },
         forward: {
@@ -15,9 +15,30 @@ export const MenuConfig = Object.freeze({
           }
       }
     },
-    routeLogin: {
-      login: '/auth/login',
-      home: '/home'
-    }
+
+    items : [
+      {
+        title: 'Postes caidos',
+        route: '/form/fallenpoles',
+        icon: 'assets/poste.svg'
+      },
+      {
+        title: 'Cortes de energía',
+        route: '/form/powers',
+        icon: 'assets/corteenergia.svg'
+      },
+      {
+        title: 'Falla de Transformador',
+        route: '/form/reportTransformerFailure',
+        icon: 'assets/fallatranformador.svg'
+      },
+      {
+        title: 'Cables dañados o caidos',
+        route: '/form/damage',
+        icon: 'assets/cablesdañados.svg'
+      },
+    ]
+
   });
-  
+
+
