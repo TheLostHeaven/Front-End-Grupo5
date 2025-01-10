@@ -10,33 +10,12 @@ import { Router } from '@angular/router';
 })
 export class MenuPage {
 
-
   public config = MenuConfig;
 
-  public items = [
-    {
-      title: 'Postes caidos',
-      route: 'form/fallenpoles',
-      icon: 'assets/poste.svg'
-    },
-    {
-      title: 'Cortes de energía',
-      route: 'form/powerUp',
-      icon: 'assets/corteenergia.svg'
-    },
-    {
-      title: 'Falla de transformador',
-      route: 'form/tranformer',
-      icon: 'assets/fallatranformador.svg'
-    },
-    {
-      title: 'Cables dañados o caidos',
-      route: '/form/damage',
-      icon: 'assets/cablesdañados.svg'
-    },
-  ];
-
-
+  items = Object.entries(MenuConfig.items).map(([key, value]) => ({
+    id: key,
+    path: value,
+  }));
 
   constructor(private location: Location,private router: Router) { }
 
