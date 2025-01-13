@@ -1,10 +1,11 @@
 <div class="menu__container">
   <div class="flex align-items-center flex-column">
-    <div class="border-round-3xl px-5 pt-8 flex flex-wrap justify-content-center">
+    <h1 class="pt-2">{{ config.i18n.title }}</h1>
+    <div class="border-round-3xl px-5 pt-3 flex flex-wrap justify-content-center">
     @for (item of items; track item.id) {
-      <div class="cursor-pointer container w-7rem h-9rem bg-gray-100 m-3 text-center p-2 shadow-4 border-round-2xl">
+      <div class="cursor-pointer container w-7rem h-10rem bg-gray-100 m-2 text-center p-2 shadow-4 border-round-2xl">
         <div class="image-container">
-          <img [src]="item.path.icon" alt="{{ item.path.title }} icon" class="w-3rem" />
+          <img [src]="item.path.icon" alt="{{ item.path.title }} icon" class="w-4rem" />
           <a class="text-container" [routerLink]="item.path.route">{{ item.path.title }}</a>
         </div>
       </div>
