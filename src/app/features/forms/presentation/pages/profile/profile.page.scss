@@ -1,0 +1,122 @@
+.profile-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .profile-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .profile-info {
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .info-label {
+        font-weight: bold;
+        text-align: right;
+        margin-right: 7rem;
+      }
+
+      .info-value {
+        text-align: right;
+      }
+
+      .edit-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .contracts-section {
+    margin-top: 1rem;
+
+    .contract-card {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .contract-info {
+        display: flex;
+        align-items: center;
+        
+        .contract-icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 2rem; /* Espacio entre la imagen y la información */
+        }
+
+        .contract-details {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+        }
+      }
+    }
+
+    .add-contract-button {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      background-color: #E69F25;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .save-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: #E69F25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
