@@ -1,0 +1,44 @@
+<div class="profile-container">
+    <!-- Encabezado del perfil -->
+    <div class="profile-header">
+      <img [src]="config.i18n.profileHeader.profileIcon" alt="Profile Icon" class="profile-icon" />
+      <h2 class="profile-name">{{ config.i18n.profileHeader.name }}</h2>
+    </div>
+  
+    <!-- Información del perfil -->
+    <div class="profile-info">
+        <div class="info-item" *ngFor="let field of profileFields">
+          <span class="info-label">{{ field.label }}</span>
+          <span class="info-value">{{ field.value }}</span>
+          <button *ngIf="field.editable" type="button" class="edit-button" (click)="editField(field.label)">
+            <img [src]="field.icon" alt="Edit Icon" />
+          </button> 
+        </div>
+      </div>
+      
+  
+    <hr />
+  
+    <!-- Contratos -->
+    <div class="contracts-section">
+        <h3>{{ config.i18n.contractsSection.title }}</h3>
+        <div class="contract-card" *ngFor="let contract of config.i18n.contractsSection.contracts">
+          <div class="contract-info">
+            <img [src]="config.i18n.profileHeader.profileIcon" alt="Profile Icon" class="contract-icon" />
+            <div class="contract-details">
+              <span>{{ contract.name }}</span>
+              <span>N° contrato: {{ contract.contractNumber }}</span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="add-contract-button" (click)="addContract()">
+          {{ config.i18n.contractsSection.addContractButton }}
+        </button>
+      </div>
+      
+    <!-- Botón de guardar -->
+    <button type="button" class="save-button" (click)="saveChanges()">
+      {{ config.i18n.actions.saveButton }}
+    </button>
+  </div>
+  

@@ -20,6 +20,7 @@ import { SectorDamageComponent } from './pages/sector-damage/sector-damage.page'
 import { SectorDamageTwoComponent } from './pages/sector-damage-two/sector-damage-two.page';
 import { SectorDamageThreeComponent } from './pages/sector-damage-three/sector-damage-three.page';
 import { TransformerFailureComponent } from './pages/transformer-failure/transformer-failure.page';
+import { ProfileComponent } from './pages/profile/profile.page';
 import { DamagedCablesComponent } from './pages/damaged-cables/damaged-cables.page';
 import { DiagnosisDamagedComponent } from './pages/diagnosis-damaged/diagnosis-damaged.page';
 import { DamageHousePage } from './pages/damage-house/damage-house.page';
@@ -36,6 +37,7 @@ import { DamageHouseStep3Page } from './pages/damage-house-step3/damage-house-st
     SectorDamageTwoComponent,
     SectorDamageThreeComponent,
     TransformerFailureComponent,
+    ProfileComponent,
     DamagedCablesComponent,
     DiagnosisDamagedComponent,
     DamageHousePage,

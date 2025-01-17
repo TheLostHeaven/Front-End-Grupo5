@@ -13,6 +13,7 @@ import { DamageHousePage } from "./pages/damage-house/damage-house.page";
 import { DamageHouseStep2Page } from "./pages/damage-house-step2/damage-house-step2.page";
 import { DamageHouseStep3Page } from "./pages/damage-house-step3/damage-house-step3.page";
 import { DiagnosisDamagedComponent } from "./pages/diagnosis-damaged/diagnosis-damaged.page";
+import { ProfileComponent } from "./pages/profile/profile.page";
 
 const routes: Routes = [
   { path: 'menu', component: MenuPage },
@@ -25,7 +26,7 @@ const routes: Routes = [
   { path: 'powers/sectorThree', component: SectorDamageThreeComponent },
 
   { path: 'reportTransformerFailure', component: TransformerFailureComponent },
-  { path: 'reportTransformerform', component: DiagnosisDamagedComponent },
+  { path: 'profile', component: ProfileComponent },  { path: 'reportTransformerform', component: DiagnosisDamagedComponent },
 
   { path: 'damage', component: DamagedCablesComponent },
 
