@@ -12,4 +12,7 @@ export const DiagnosticConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    home: '/home'
+  }
 });

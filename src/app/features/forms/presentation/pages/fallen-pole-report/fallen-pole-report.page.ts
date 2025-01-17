@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FallenPoleReportConfig } from './fallen-pole-report.config';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fallen-pole-report',
@@ -11,7 +12,8 @@ export class FallenPoleReportComponent {
   public config = FallenPoleReportConfig;
   public reportForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder, private router: Router) {
     this.reportForm = this.fb.group({
       description: [
         this.config.i18n.formContent.description.config.initialValue,
@@ -25,13 +27,9 @@ export class FallenPoleReportComponent {
   }
 
   public setSector(isInSector: boolean): void {
-    // Handle sector selection logic here
   }
 
   public submitReport(): void {
-    if (this.reportForm.valid) {
-      console.log(this.reportForm.value);
-      // Implement API call to submit the report
-    }
+      this.router.navigate([this.config.routes.home]);
   }
 }

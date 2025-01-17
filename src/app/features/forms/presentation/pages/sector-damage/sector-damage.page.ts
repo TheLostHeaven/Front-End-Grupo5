@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DiagnosticConfig } from './sector-damage.config'; 
+import { DiagnosticConfig } from './sector-damage.config';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sector-damage',
@@ -10,7 +11,11 @@ export class SectorDamageComponent {
   public config = DiagnosticConfig;
   public selectedOption: string | null = null;
 
+  constructor(
+    private router: Router,){
+    }
   public onOptionSelect(option: string): void {
-    this.selectedOption = option; // Al seleccionar una opción, la guardamos
+    this.selectedOption = option;
+    this.router.navigate([this.config.routes.nextStep]);
   }
 }

@@ -42,4 +42,7 @@ export const FallenPoleReportConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    home: '/home'
+  }
 });

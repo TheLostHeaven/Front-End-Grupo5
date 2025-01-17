@@ -9,7 +9,7 @@
           [placeholder]="config.i18n.formContent.description.placeholder">
         </textarea>
       </div>
-  
+
       <div class="form-item">
         <div class="options">
           <button
@@ -30,7 +30,7 @@
           </button>
         </div>
       </div>
-  
+
       <div class="form-item">
         <label for="contactNumber">{{ config.i18n.formContent.contactNumber.label }}</label>
         <input
@@ -39,7 +39,7 @@
           formControlName="contactNumber"
           [placeholder]="config.i18n.formContent.contactNumber.placeholder" />
       </div>
-  
+
       <div class="damage-details">
         <div class="detail-item">
           <img [src]="config.i18n.formContent.damageDetails.images.location" alt="Ubicación" />
@@ -50,12 +50,11 @@
           <button type="button">{{ config.i18n.formContent.damageDetails.buttons.photo }}</button>
         </div>
       </div>
-  
+
       <button
         type="submit"
-        [disabled]="reportForm.invalid">
+        (click)="submitReport()">
         {{ config.i18n.formContent.buttons.submitLabel }}
       </button>
     </form>
   </div>
-  
