@@ -33,8 +33,8 @@ export const DamagedCablesConfig = Object.freeze({
           photo: 'Incluir foto',
         },
         images: {
-          location: 'assets/cable-location.svg',
-          photo: 'assets/cable-photo-icon.svg',
+          location: 'assets/location.svg',
+          photo: 'assets/photo-icon.svg',
         },
       },
       buttons: {
@@ -42,4 +42,7 @@ export const DamagedCablesConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    home: '/home'
+  }
 });
