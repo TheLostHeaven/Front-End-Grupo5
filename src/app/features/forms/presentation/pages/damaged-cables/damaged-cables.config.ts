@@ -1,19 +1,19 @@
 import { Validators } from "@angular/forms";
 
-export const FallenPoleReportConfig = Object.freeze({
+export const DamagedCablesConfig = Object.freeze({
   i18n: {
-    title: 'Postes Caídos',
+    title: 'Cables Dañados',
     formContent: {
       description: {
         label: 'Descripción',
-        placeholder: 'Describe el problema',
+        placeholder: 'Describe el problema con los cables',
         config: {
           initialValue: '',
-          validators: [Validators.required, Validators.maxLength(200)],
+          validators: [Validators.required, Validators.maxLength(300)],
         },
       },
       sector: {
-        question: '¿Fue en tu sector el imprevisto del poste?',
+        question: '¿Fue en tu sector el daño de los cables?',
         options: {
           yes: 'Sí',
           no: 'No',

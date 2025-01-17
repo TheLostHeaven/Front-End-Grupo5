@@ -45,4 +45,7 @@ export const PowerOutageConfig = Object.freeze({
         },
       },
     },
-  });  
+    routes: {
+      nextStep: '/form/powers/sector'
+    }
+  });

@@ -1,0 +1,29 @@
+<div class="diagnostic__container flex flex-column align-items-center">
+  <h1 class="text-center">{{ config.i18n.title }}</h1>
+
+  <div class="diagnostic__form border-round-3xl px-5">
+  <form>
+      <p class="form-question">{{ config.i18n.formContent.question }}</p>
+
+      <div class="form-options flex flex-column align-items-center">
+      <button
+          type="button"
+          class="option-button mb-3"
+          [ngClass]="{'selected': selectedOption === 'yes'}"
+          (click)="onOptionSelect('yes')"
+      >
+          {{ config.i18n.formContent.options.yes }}
+      </button>
+      <button
+          type="button"
+          class="option-button"
+          [ngClass]="{'selected': selectedOption === 'no'}"
+          (click)="onOptionSelect('no')"
+      >
+          {{ config.i18n.formContent.options.no }}
+      </button>
+      </div>
+
+  </form>
+  </div>
+</div>

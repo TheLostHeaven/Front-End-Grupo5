@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DiagnosticConfig } from './sector-damage-three.config'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sector-damage-three',
@@ -10,8 +11,11 @@ export class SectorDamageThreeComponent {
   public config = DiagnosticConfig;
   public selectedOption: string | null = null;
 
+  constructor(private router : Router,) {}
+
   public onOptionSelect(option: string): void {
-    this.selectedOption = option; // Guardamos la opción seleccionada
+    this.selectedOption = option;
+    this.router.navigate([this.config.routes.home]); // Guardamos la opción seleccionada
   }
 
   public submitReport(): void {
@@ -19,7 +23,7 @@ export class SectorDamageThreeComponent {
       const reportData = {
         noiseIssue: this.selectedOption === 'yes',
       };
-      
+
       // Simula el envío del reporte (puedes integrar un servicio real aquí)
       console.log('Reporte enviado:', reportData);
     }

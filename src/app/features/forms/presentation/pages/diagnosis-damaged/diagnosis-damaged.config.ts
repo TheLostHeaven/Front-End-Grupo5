@@ -4,7 +4,7 @@ export const DiagnosticConfig = Object.freeze({
   i18n: {
     title: 'Autodiagnóstico',
     formContent: {
-      question: '¿La caída del poste generó una falla de energía en el sector?',
+      question: '¿Observas algún poste, cable o transformador cercano con daños visibles (como chispas, humo, o que esté inclinado)?',
       options: {
         yes: 'Sí',
         no: 'No',
@@ -26,7 +26,6 @@ export const DiagnosticConfig = Object.freeze({
     },
   },
   routes: {
-    poleFlow: '/form/reports',
-    damageFlow: '/form/damageHouse',
+    home: '/home'
   }
 });

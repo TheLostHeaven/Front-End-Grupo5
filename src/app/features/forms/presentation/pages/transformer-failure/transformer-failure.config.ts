@@ -42,4 +42,7 @@ export const TransformerFailureConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    nextStep: '/form/reportTransformerform'
+  }
 });

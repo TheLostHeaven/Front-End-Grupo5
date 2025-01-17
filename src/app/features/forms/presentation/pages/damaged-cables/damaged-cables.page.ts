@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { FallenPoleReportConfig } from './fallen-pole-report.config';
+import { DamagedCablesConfig } from './damaged-cables.config';
 import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-fallen-pole-report',
-  templateUrl: './fallen-pole-report.page.html',
-  styleUrls: ['./fallen-pole-report.page.scss']
-})
-export class FallenPoleReportComponent {
-  public config = FallenPoleReportConfig;
-  public reportForm: FormGroup;
 
+@Component({
+  selector: 'app-damaged-cables',
+  templateUrl: './damaged-cables.page.html',
+  styleUrl: './damaged-cables.page.scss'
+})
+export class DamagedCablesComponent {
+  public config = DamagedCablesConfig;
+  public reportForm: FormGroup;
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.reportForm = this.fb.group({
@@ -27,9 +27,10 @@ export class FallenPoleReportComponent {
   }
 
   public setSector(isInSector: boolean): void {
+    // Handle sector selection logic here
   }
 
   public submitReport(): void {
-      this.router.navigate([this.config.routes.home]);
+    this.router.navigate([this.config.routes.home]);
   }
 }

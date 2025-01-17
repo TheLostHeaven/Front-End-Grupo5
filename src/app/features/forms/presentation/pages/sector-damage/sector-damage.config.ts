@@ -11,4 +11,7 @@ export const DiagnosticConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    nextStep: '/form/powers/sectorTwo'
+  }
 });
