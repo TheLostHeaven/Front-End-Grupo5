@@ -12,17 +12,23 @@ import { DamagedCablesComponent } from "./pages/damaged-cables/damaged-cables.pa
 import { DamageHousePage } from "./pages/damage-house/damage-house.page";
 import { DamageHouseStep2Page } from "./pages/damage-house-step2/damage-house-step2.page";
 import { DamageHouseStep3Page } from "./pages/damage-house-step3/damage-house-step3.page";
+import { DiagnosisDamagedComponent } from "./pages/diagnosis-damaged/diagnosis-damaged.page";
 
 const routes: Routes = [
   { path: 'menu', component: MenuPage },
   { path: 'reports', component: FallenPoleReportComponent },
   { path: 'fallenpoles', component: ReportDamageComponent },
+
   { path: 'powers', component: PowerOutageComponent },
   { path: 'powers/sector', component: SectorDamageComponent },
   { path: 'powers/sectorTwo', component: SectorDamageTwoComponent },
   { path: 'powers/sectorThree', component: SectorDamageThreeComponent },
+
   { path: 'reportTransformerFailure', component: TransformerFailureComponent },
-  { path: 'Damage', component: DamagedCablesComponent },
+  { path: 'reportTransformerform', component: DiagnosisDamagedComponent },
+
+  { path: 'damage', component: DamagedCablesComponent },
+
   { path: 'damageHouse', component: DamageHousePage },
   { path: 'damageHouse-step2', component: DamageHouseStep2Page },
   { path: 'damageHouse-step3', component: DamageHouseStep3Page },
