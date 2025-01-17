@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TransformerFailureConfig } from './transformer-failure.config';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transformer-failure',
@@ -10,8 +11,8 @@ import { TransformerFailureConfig } from './transformer-failure.config';
 export class TransformerFailureComponent {
   public config = TransformerFailureConfig;
     public reportForm: FormGroup;
-  
-    constructor(private fb: FormBuilder) {
+
+    constructor(private fb: FormBuilder, private router: Router) {
       this.reportForm = this.fb.group({
         description: [
           this.config.i18n.formContent.description.config.initialValue,
@@ -23,15 +24,12 @@ export class TransformerFailureComponent {
         ]
       });
     }
-  
+
     public setSector(isInSector: boolean): void {
       // Handle sector selection logic here
     }
-  
+
     public submitReport(): void {
-      if (this.reportForm.valid) {
-        console.log(this.reportForm.value);
-        // Implement API call to submit the report
-      }
+      this.router.navigate([this.config.routes.nextStep]);
     }
 }

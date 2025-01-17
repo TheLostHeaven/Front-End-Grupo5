@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'powers/sectorThree', component: SectorDamageThreeComponent },
 
   { path: 'reportTransformerFailure', component: TransformerFailureComponent },
-  { path: 'profile', component: ProfileComponent },  { path: 'reportTransformerform', component: DiagnosisDamagedComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'reportTransformerform', component: DiagnosisDamagedComponent },
 
   { path: 'damage', component: DamagedCablesComponent },
 
