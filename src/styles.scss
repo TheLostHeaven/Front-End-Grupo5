@@ -1,1 +1,51 @@
+// @import 'app/shared/lib/assets/config/index';
+
+// body {
+//   @include mq-max('md') {
+//   }
+
+//   @include mq-between('md', 'lg') {
+//   }
+
+//   @include mq-min('lg') {
+//   }
+// }
+
 @import 'app/shared/lib/assets/config/index';
+
+button {
+  // Estilos generales para todos los botones
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include mq-max('md') {
+    // Estilos específicos para teléfonos
+    width: 100%;
+  }
+
+  @include mq-between('md', 'lg') {
+    // Estilos específicos para tabletas
+    width: 80%;
+  }
+
+  @include mq-min('lg') {
+    // Estilos específicos para monitores
+    width: 60%;
+  }
+}
+
+body {
+  @include mq-max('md') {
+    // Estilos específicos para resoluciones menores a 'md'
+  }
+
+  @include mq-between('md', 'lg') {
+    // Estilos específicos para resoluciones entre 'md' y 'lg'
+  }
+
+  @include mq-min('lg') {
+    // Estilos específicos para resoluciones mayores a 'lg'
+  }
+}

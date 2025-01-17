@@ -1,11 +1,11 @@
-<div class="home__container flex align-items-center flex-column mt-3">
-  <div>
+<div class="home__container flex align-items-center flex-column mt-2">
+  <div  class="home__dropdown">
     <power-fix-dropdown
     [dropDownLabel]="config.i18n.formContent.dropdown.titleDrop"
     >
   </power-fix-dropdown>
   </div>
-  <h3 class="text-center pt-4">{{ config.i18n.subTitle }}</h3>
+  <h3 class="text-center pt-2">{{ config.i18n.subTitle }}</h3>
 
     <div class="logo-image mx-auto bg-white border-circle">
       <p-image [src]="config.image.iconHome.img" [alt]="config.image.iconHome.alt" width="200" />

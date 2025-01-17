@@ -2,34 +2,34 @@
   &__container{
     width: 100%;
     height: 100vh;
+    margin: 0 auto;
   }
-
-  h2{
-    font-size: .5;
-  }
-
-  &__button{
-    ::ng-deep .report-button {
-      filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
-      width: 200px;
-      height: 45px;
-      font-size: 20px;
-      background-color: var(--powerfix-primary);
-      color: #263402;
-      border: none;
-      font-weight: bold;
+    h2{
+      font-size: .5;
     }
 
-    ::ng-deep .more-button {
-      filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
-      width: 17rem;
-      height: 45px;
-      font-size: 20px;
-      background-color: var(--powerfix-primary-opacity-75);
-      color: #263402;
-      border: none;
-      font-weight: bold;
+  &__button{
+      ::ng-deep .report-button {
+        filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
+        width: 200px;
+        height: 45px;
+        font-size: 20px;
+        background-color: var(--powerfix-primary);
+        color: #263402;
+        border: none;
+        font-weight: bold;
       }
+
+  ::ng-deep .more-button {
+        filter: drop-shadow(0px 4px 4px var(--drop-shadow-29));
+        width: 17rem;
+        height: 45px;
+        font-size: 20px;
+        background-color: var(--powerfix-primary-opacity-75);
+        color: #263402;
+        border: none;
+        font-weight: bold;
   }
+}
 }
 
