@@ -13,6 +13,7 @@ export const HeaderConfig = Object.freeze({
     }
   },
   routes: {
-    home: '/home'
+    home: '/home',
+    login: '/auth/login',
   }
 })

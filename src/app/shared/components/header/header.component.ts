@@ -18,4 +18,7 @@ export class HeaderComponent {
     this.router.navigate([this.config.routes.home])
   }
 
+  public goToLogin(): void {
+    this.router.navigate([this.config.routes.login])
+  }
 }

@@ -25,4 +25,8 @@ export const DiagnosticConfig = Object.freeze({
       },
     },
   },
+  routes: {
+    poleFlow: '/form/reports',
+    damageFlow: '/form/damageHouse',
+  }
 });

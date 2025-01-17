@@ -13,7 +13,10 @@
 
       <div class="nav-button">
         <ul>
-          <button class="navbar-button" [src]="config.image.icon.img">
+          <button
+          (click)="goToLogin()"
+          class="navbar-button"
+          [src]="config.image.icon.img">
             <p-image [src]="config.image.icon.img" [alt]="config.image.icon.alt" width="36" height="40"/>
           </button>
         </ul>
