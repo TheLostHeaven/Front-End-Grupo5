@@ -20,6 +20,8 @@ import { SectorDamageComponent } from './pages/sector-damage/sector-damage.page'
 import { SectorDamageTwoComponent } from './pages/sector-damage-two/sector-damage-two.page';
 import { SectorDamageThreeComponent } from './pages/sector-damage-three/sector-damage-three.page';
 import { TransformerFailureComponent } from './pages/transformer-failure/transformer-failure.page';
+import { DamagedCablesComponent } from './pages/damaged-cables/damaged-cables.page';
+import { DiagnosisDamagedComponent } from './pages/diagnosis-damaged/diagnosis-damaged.page';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { TransformerFailureComponent } from './pages/transformer-failure/transfo
     SectorDamageComponent,
     SectorDamageTwoComponent,
     SectorDamageThreeComponent,
-    TransformerFailureComponent
+    TransformerFailureComponent,
+    DamagedCablesComponent,
+    DiagnosisDamagedComponent
   ],
   exports: [
 

@@ -8,6 +8,7 @@ import { SectorDamageComponent } from "./pages/sector-damage/sector-damage.page"
 import { SectorDamageThreeComponent } from "./pages/sector-damage-three/sector-damage-three.page";
 import { SectorDamageTwoComponent } from "./pages/sector-damage-two/sector-damage-two.page";
 import { TransformerFailureComponent } from "./pages/transformer-failure/transformer-failure.page";
+import { DamagedCablesComponent } from "./pages/damaged-cables/damaged-cables.page";
 
 const routes: Routes = [
   { path: 'menu', component: MenuPage },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'powers/sectorTwo', component: SectorDamageTwoComponent },
   { path: 'powers/sectorThree', component: SectorDamageThreeComponent },
   { path: 'reportTransformerFailure', component: TransformerFailureComponent },
+  { path: 'Damage', component: DamagedCablesComponent },
 
 ];
 
