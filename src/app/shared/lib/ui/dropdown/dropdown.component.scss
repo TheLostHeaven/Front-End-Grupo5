@@ -1,0 +1,14 @@
+@import  '../../assets/config/variables';
+@import  '../../assets/config/power-fix-colors';
+
+.p-dropdown-items .p-dropdown-item {
+  background-color: #ffffff;
+  color: #ff0000;
+  transition: background-color 0.3s;
+}
+
+.custom-dropdown {
+  background-color: #000000;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}

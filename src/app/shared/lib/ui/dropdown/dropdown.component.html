@@ -1,0 +1,31 @@
+<span class="p-float-label label">
+  <p-dropdown
+    appendTo="body"
+    [ngClass]="{
+      'p-invalid': messageError
+    }"
+    [autoDisplayFirst]="false"
+    [inputId]="inputId"
+    [options]="dropdownObjectValues"
+    optionLabel="name"
+    optionValue="code"
+    [dropdownIcon]="chevronOrientation"
+    (onClick)="setChevronOrientationUp()"
+    (onHide)="setChevronOrientationDown()"
+    [scrollHeight]="scrollHeightWrapper"
+    [virtualScroll]="virtualScroll"
+    (onChange)="onChanges($event)"
+    (onBlur)="touched()"
+    [disabled]="isDisabled"
+    [(ngModel)]="optionValue"
+    [virtualScrollItemSize]="virtualScrollItemSize"
+    styleClass="custom-dropdown"
+  ></p-dropdown>
+  <label [for]="inputId">{{ dropDownLabel }}</label>
+</span>
+<span class="p-message-label p-message-label__current" *ngIf="textInformative && !messageError">{{
+  textInformative
+}}</span>
+<i class="pi pi-check-circle" style="margin-right: 8px; color: green;"></i>
+<span class="p-message-label p-message-label__error" *ngIf="messageError">{{ messageError }}</span>
+
