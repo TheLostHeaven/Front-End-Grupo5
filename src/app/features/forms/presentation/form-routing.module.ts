@@ -9,6 +9,7 @@ import { SectorDamageThreeComponent } from "./pages/sector-damage-three/sector-d
 import { SectorDamageTwoComponent } from "./pages/sector-damage-two/sector-damage-two.page";
 import { TransformerFailureComponent } from "./pages/transformer-failure/transformer-failure.page";
 import { DamagedCablesComponent } from "./pages/damaged-cables/damaged-cables.page";
+import { ProfileComponent } from "./pages/profile/profile.page";
 
 const routes: Routes = [
   { path: 'menu', component: MenuPage },
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'powers/sectorThree', component: SectorDamageThreeComponent },
   { path: 'reportTransformerFailure', component: TransformerFailureComponent },
   { path: 'Damage', component: DamagedCablesComponent },
-
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
